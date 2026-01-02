@@ -69,10 +69,11 @@ Prediccion-de-Retrasos-de-Vuelos/
 ## 🚀 Cómo ejecutar
 
 ### 1. Entrenar el modelo en Python
-```bash
+``bash
 cd ds
 python train_model.py
-Esto genera el archivo:
+
+**Esto genera el archivo:**
 model/flight_delay_model.joblib
 
 **2. Ejecutar el backend**
@@ -140,7 +141,7 @@ Recibe un JSON con los datos del vuelo y devuelve la predicción.
 **📜 Licencia**
 Este proyecto se distribuye bajo la licencia MIT.
 
----
+
 
 
 
