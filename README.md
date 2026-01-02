@@ -1,4 +1,4 @@
-##**Notebook_flight_on_time.ipynb**##
+**Notebook_flight_on_time.ipynb**
 # ✈️ FlightOnTime API
 
 ## 📌 Descripción
@@ -75,18 +75,18 @@ python train_model.py
 Esto genera el archivo:
 model/flight_delay_model.joblib
 
-### 2. Ejecutar el backend
+**2. Ejecutar el backend**
 cd be
 mvnd spring-boot:run
 
-** El servidor se levanta en:
+**El servidor se levanta en:**
 
 http://localhost:8080
 
-## 📑 Endpoints
+**📑 Endpoints**
 
-## REST API
-## - POST /predict
+**REST API**
+**- POST /predict**
 Recibe un JSON con los datos del vuelo y devuelve la predicción.
 
 {
@@ -109,12 +109,12 @@ Recibe un JSON con los datos del vuelo y devuelve la predicción.
   "status": "Predicted delay"
 }
 
-## Interfaz Web
+**Interfaz Web**
 - GET /form → muestra formulario HTML.
 - POST /form → procesa datos y muestra resultado en result.html.
 
-## 📊 Modelo de Machine Learning
-## - Features utilizadas:
+**📊 Modelo de Machine Learning**
+**- Features utilizadas:**
 - Aerolínea
 - Origen
 - Destino
@@ -125,19 +125,19 @@ Recibe un JSON con los datos del vuelo y devuelve la predicción.
 - Algoritmo: Logistic Regression con OneHotEncoder para variables categóricas.
 - Métricas: Accuracy, Precision, Recall, F1.
 
-## 🤝 Contribución
+**🤝 Contribución**
 - Haz un fork del repositorio.
 - Crea una rama (feature/nueva-funcionalidad).
 - Haz commit de tus cambios.
 - Haz push a la rama.
 - Abre un Pull Request.
 
-## 🌙 En resumen:
+**🌙 En resumen:**
 
  Este README da una guía para entrenar el modelo, correr el backend y usar tanto la API REST como el formulario web.  
 
 
-## 📜 Licencia
+**📜 Licencia**
 Este proyecto se distribuye bajo la licencia MIT.
 
 ---
