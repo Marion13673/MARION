@@ -20,135 +20,71 @@ El proyecto combina:
 
 ## 📂 Estructura del proyecto
 
-````**Prediccion-de-Retrasos-de-Vuelos/**
-
-**├── be/                          # Backend en Spring Boot**
-
-**│   ├── pom.xml                  # Configuración de Maven**
-
-**│   ├── src/**
-
-**│   │   ├── main/**
-
-**│   │   │   ├── java/com/flightontime/**
-
-**│   │   │   │   ├── controller/**
-
-**│   │   │   │   │   ├── HelloController.java**
-
-**│   │   │   │   │   ├── PredictController.java**
-
-**│   │   │   │   │   ├── StatsController.java**
-
-**│   │   │   │   │   └── WebController.java**
-
-**│   │   │   │   ├── dto/**
-
-**│   │   │   │   │   ├── FlightInput.java**
-
-**│   │   │   │   │   └── PredictionOutput.java**
-
-**│   │   │   │   ├── exception/**
-
-**│   │   │   │   │   └── GlobalExceptionHandler.java**
-
-**│   │   │   │   ├── service/**
-
-**│   │   │   │   │   └── DsClient.java**
-
-**│   │   │   │   └── FlightOnTimeApplication.java**
-
-**│   │   │   └── resources/**
-
-**│   │   │       ├── application.yml**
-
-**│   │   │       └── templates/**
-
-**│   │   │           ├── form.html**
-
-**│   │   │           └── result.html**
-
-**│   └── target/**
-
-**│       ├── classes/**
-
-**│       │   ├── application.yml**
-
-**│       │   ├── com/flightontime/**
-
-**│       │   │   ├── controller/**
-
-**│       │   │   │   ├── HelloController.class**
-
-**│       │   │   │   ├── PredictController.class**
-
-**│       │   │   │   ├── StatsController.class**
-
-**│       │   │   │   └── WebController.class**
-
-**│       │   │   ├── dto/**
-
-**│       │   │   │   ├── FlightInput.class**
-
-**│       │   │   │   └── PredictionOutput.class**
-
-**│       │   │   ├── exception/**
-
-**│       │   │   │   └── GlobalExceptionHandler.class**
-
-**│       │   │   ├── service/**
-
-**│       │   │   │   └── DsClient.class**
-
-**│       │   │   └── FlightOnTimeApplication.class**
-
-**│       │   └── templates/**
-
-**│       │       ├── form.html**
-
-**│       │       └── result.html**
-
-**│       ├── generated-sources/**
-
-**│       │   └── annotations/**
-
-**│       └── maven-status/**
-
-**│           └── maven-compiler-plugin/**
-
-**│               └── compile/**
-
-**│                   └── default-compile/**
-
-**│                       ├── createdFiles.lst**
-
-**│                       └── inputFiles.lst**
-
-**├── ds/                          # Data Science / Machine Learning**
-
-**│   ├── app/**
-
-**│   │   ├── dashboard.py**
-
-**│   │   ├── hello.py**
-
-**│   │   └── main.py**
-
-**│   ├── data/**
-
-**│   │   └── flights2015.csv**
-
-**│   ├── model/**
-
-**│   │   └── flight\_delay\_model.joblib**
-
-**│   ├── notebook\_flight\_on\_time.ipynb**
-
-**│   └── requirements.txt**
-
-**├── README.md                    # Documentación del proyecto**
-
-**└── .gitignore                   # Archivos ignorados por Git**
+````Prediccion-de-Retrasos-de-Vuelos/
+├── be/                          # Backend en Spring Boot
+│   ├── pom.xml                  # Configuración de Maven
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/flightontime/
+│   │   │   │   ├── controller/
+│   │   │   │   │   ├── HelloController.java
+│   │   │   │   │   ├── PredictController.java
+│   │   │   │   │   ├── StatsController.java
+│   │   │   │   │   └── WebController.java
+│   │   │   │   ├── dto/
+│   │   │   │   │   ├── FlightInput.java
+│   │   │   │   │   └── PredictionOutput.java
+│   │   │   │   ├── exception/
+│   │   │   │   │   └── GlobalExceptionHandler.java
+│   │   │   │   ├── service/
+│   │   │   │   │   └── DsClient.java
+│   │   │   │   └── FlightOnTimeApplication.java
+│   │   │   └── resources/
+│   │   │       ├── application.yml
+│   │   │       └── templates/
+│   │   │           ├── form.html
+│   │   │           └── result.html
+│   └── target/
+│       ├── classes/
+│       │   ├── application.yml
+│       │   ├── com/flightontime/
+│       │   │   ├── controller/
+│       │   │   │   ├── HelloController.class
+│       │   │   │   ├── PredictController.class
+│       │   │   │   ├── StatsController.class
+│       │   │   │   └── WebController.class
+│       │   │   ├── dto/
+│       │   │   │   ├── FlightInput.class
+│       │   │   │   └── PredictionOutput.class
+│       │   │   ├── exception/
+│       │   │   │   └── GlobalExceptionHandler.class
+│       │   │   ├── service/
+│       │   │   │   └── DsClient.class
+│       │   │   └── FlightOnTimeApplication.class
+│       │   └── templates/
+│       │       ├── form.html
+│       │       └── result.html
+│       ├── generated-sources/
+│       │   └── annotations/
+│       └── maven-status/
+│           └── maven-compiler-plugin/
+│               └── compile/
+│                   └── default-compile/
+│                       ├── createdFiles.lst
+│                       └── inputFiles.lst
+├── ds/                          # Data Science / Machine Learning
+│   ├── app/
+│   │   ├── dashboard.py
+│   │   ├── hello.py
+│   │   └── main.py
+│   ├── data/
+│   │   └── flights2015.csv
+│   ├── model/
+│   │   └── flight_delay_model.joblib
+│   ├── notebook_flight_on_time.ipynb
+│   └── requirements.txt
+├── README.md                    # Documentación del proyecto
+└── .gitignore                   # Archivos ignorados por Git
 
 ````
 
