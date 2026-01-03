@@ -20,7 +20,8 @@ El proyecto combina:
 
 ## 📂 Estructura del proyecto
 
-````Prediccion-de-Retrasos-de-Vuelos/
+````
+Prediccion-de-Retrasos-de-Vuelos/
 ├── be/                          # Backend en Spring Boot
 │   ├── pom.xml                  # Configuración de Maven
 │   ├── src/
