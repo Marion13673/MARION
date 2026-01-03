@@ -21,73 +21,40 @@ El proyecto combina:
 ## 📂 Estructura del proyecto
 **Prediccion-de-Retrasos-de-Vuelos/**
 
-**├── be/                                           # Backend en Spring Boot**
-
-**│   ├── pom.xml                                   # Configuración de Maven**
-
+**├── be/                                          > # Backend en Spring Boot**
+**│   ├── pom.xml                                  > # Configuración de Maven**
 **│   ├── src/**
-
 **│   │   ├── main/**
-
 **│   │   │   ├── java/com/flightontime/**
-
 **│   │   │   │   ├── controller/**
-
-**│   │   │   │   │   ├── PredictController.java   # API REST (JSON)**
-
-**│   │   │   │   │   └── WebController.java       # Formulario HTML**
-
+**│   │   │   │   │   ├── PredictController.java   > # API REST (JSON)**
+**│   │   │   │   │   └── WebController.java       > # Formulario HTML**
 **│   │   │   │   ├── dto/**
-
-**│   │   │   │   │   ├── FlightInput.java         # DTO de entrada**
-
-**│   │   │   │   │   └── PredictionOutput.java    # DTO de salida**
-
-**│   │   │   │   └── FlightOnTimeApplication.java # Clase principal Spring Boot**
-
+**│   │   │   │   │   ├── FlightInput.java         > # DTO de entrada**
+**│   │   │   │   │   └── PredictionOutput.java    > # DTO de salida**
+**│   │   │   │   └── FlightOnTimeApplication.java > # Clase principal Spring Boot**
 **│   │   │   └── resources/**
-
-**│   │   │       ├── application.properties       # Configuración del backend**
-
+**│   │   │       ├── application.properties       > # Configuración del backend**
 **│   │   │       └── templates/**
-
-**│   │   │           ├── form.html                # Formulario de ingreso de datos**
-
-**│   │   │           └── result.html              # Vista de resultados**
-
-**│   │   └── test/                                # Pruebas unitarias**
-
+**│   │   │           ├── form.html                > # Formulario de ingreso de datos**
+**│   │   │           └── result.html              > # Vista de resultados**
+**│   │   └── test/                                > # Pruebas unitarias**
 **│   │       └── java/com/flightontime/**
-
 **│   │           └── FlightOnTimeTests.java**
-
-**│   └── target/                                  # Archivos compilados**
-
+**│   └── target/                                  > # Archivos compilados**
 **│**
-
-**├── ds/                                # Data Science / Machine Learning**
-
+**├── ds/                                          > # Data Science / Machine Learning**
 **│   ├── data/**
-
-**│   │   └── flights2015.csv            # Dataset histórico de vuelos**
-
+**│   │   └── flights2015.csv                      > # Dataset histórico de vuelos**
 **│   ├── model/**
-
-**│   │   └── flight\_delay\_model.joblib  # Modelo entrenado exportado**
-
+**│   │   └── flight\_delay\_model.joblib          > # Modelo entrenado exportado**
 **│   ├── notebooks/**
-
-**│   │   └── train\_model.ipynb          # Notebook de entrenamiento**
-
+**│   │   └── train\_model.ipynb                   > # Notebook de entrenamiento**
 **│   └── scripts/**
-
-**│       └── train\_model.py             # Script Python para entrenar y exportar**
-
+**│       └── train\_model.py                      > # Script Python para entrenar y exportar**
 **│**
-
-**├── README.md                          # Documentación del proyecto**
-
-**└── .gitignore                         # Archivos ignorados por Git**
+**├── README.md                                    > # Documentación del proyecto**
+**└── .gitignore                                   > # Archivos ignorados por Git**
 
 
 ## 🔎 Explicación:
