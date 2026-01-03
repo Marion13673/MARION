@@ -20,7 +20,7 @@ El proyecto combina:
 
 ## 📂 Estructura del proyecto
 
-**Prediccion-de-Retrasos-de-Vuelos/**
+````**Prediccion-de-Retrasos-de-Vuelos/**
 
 **├── be/                          # Backend en Spring Boot**
 
@@ -150,7 +150,7 @@ El proyecto combina:
 
 **└── .gitignore                   # Archivos ignorados por Git**
 
-
+````
 
 ## 🔎 Explicación:
 - be/ → Todo el backend en Spring Boot (controladores, DTOs, vistas Thymeleaf, configuración).
