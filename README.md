@@ -20,135 +20,135 @@ El proyecto combina:
 
 ## 📂 Estructura del proyecto
 
-Prediccion-de-Retrasos-de-Vuelos/
+**Prediccion-de-Retrasos-de-Vuelos/**
 
-├── be/                          # Backend en Spring Boot
+**├── be/                          # Backend en Spring Boot**
 
-│   ├── pom.xml                  # Configuración de Maven
+**│   ├── pom.xml                  # Configuración de Maven**
 
-│   ├── src/
+**│   ├── src/**
 
-│   │   ├── main/
+**│   │   ├── main/**
 
-│   │   │   ├── java/com/flightontime/
+**│   │   │   ├── java/com/flightontime/**
 
-│   │   │   │   ├── controller/
+**│   │   │   │   ├── controller/**
 
-│   │   │   │   │   ├── HelloController.java
+**│   │   │   │   │   ├── HelloController.java**
 
-│   │   │   │   │   ├── PredictController.java
+**│   │   │   │   │   ├── PredictController.java**
 
-│   │   │   │   │   ├── StatsController.java
+**│   │   │   │   │   ├── StatsController.java**
 
-│   │   │   │   │   └── WebController.java
+**│   │   │   │   │   └── WebController.java**
 
-│   │   │   │   ├── dto/
+**│   │   │   │   ├── dto/**
 
-│   │   │   │   │   ├── FlightInput.java
+**│   │   │   │   │   ├── FlightInput.java**
 
-│   │   │   │   │   └── PredictionOutput.java
+**│   │   │   │   │   └── PredictionOutput.java**
 
-│   │   │   │   ├── exception/
+**│   │   │   │   ├── exception/**
 
-│   │   │   │   │   └── GlobalExceptionHandler.java
+**│   │   │   │   │   └── GlobalExceptionHandler.java**
 
-│   │   │   │   ├── service/
+**│   │   │   │   ├── service/**
 
-│   │   │   │   │   └── DsClient.java
+**│   │   │   │   │   └── DsClient.java**
 
-│   │   │   │   └── FlightOnTimeApplication.java
+**│   │   │   │   └── FlightOnTimeApplication.java**
 
-│   │   │   └── resources/
+**│   │   │   └── resources/**
 
-│   │   │       ├── application.yml
+**│   │   │       ├── application.yml**
 
-│   │   │       └── templates/
+**│   │   │       └── templates/**
 
-│   │   │           ├── form.html
+**│   │   │           ├── form.html**
 
-│   │   │           └── result.html
+**│   │   │           └── result.html**
 
-│   └── target/
+**│   └── target/**
 
-│       ├── classes/
+**│       ├── classes/**
 
-│       │   ├── application.yml
+**│       │   ├── application.yml**
 
-│       │   ├── com/flightontime/
+**│       │   ├── com/flightontime/**
 
-│       │   │   ├── controller/
+**│       │   │   ├── controller/**
 
-│       │   │   │   ├── HelloController.class
+**│       │   │   │   ├── HelloController.class**
 
-│       │   │   │   ├── PredictController.class
+**│       │   │   │   ├── PredictController.class**
 
-│       │   │   │   ├── StatsController.class
+**│       │   │   │   ├── StatsController.class**
 
-│       │   │   │   └── WebController.class
+**│       │   │   │   └── WebController.class**
 
-│       │   │   ├── dto/
+**│       │   │   ├── dto/**
 
-│       │   │   │   ├── FlightInput.class
+**│       │   │   │   ├── FlightInput.class**
 
-│       │   │   │   └── PredictionOutput.class
+**│       │   │   │   └── PredictionOutput.class**
 
-│       │   │   ├── exception/
+**│       │   │   ├── exception/**
 
-│       │   │   │   └── GlobalExceptionHandler.class
+**│       │   │   │   └── GlobalExceptionHandler.class**
 
-│       │   │   ├── service/
+**│       │   │   ├── service/**
 
-│       │   │   │   └── DsClient.class
+**│       │   │   │   └── DsClient.class**
 
-│       │   │   └── FlightOnTimeApplication.class
+**│       │   │   └── FlightOnTimeApplication.class**
 
-│       │   └── templates/
+**│       │   └── templates/**
 
-│       │       ├── form.html
+**│       │       ├── form.html**
 
-│       │       └── result.html
+**│       │       └── result.html**
 
-│       ├── generated-sources/
+**│       ├── generated-sources/**
 
-│       │   └── annotations/
+**│       │   └── annotations/**
 
-│       └── maven-status/
+**│       └── maven-status/**
 
-│           └── maven-compiler-plugin/
+**│           └── maven-compiler-plugin/**
 
-│               └── compile/
+**│               └── compile/**
 
-│                   └── default-compile/
+**│                   └── default-compile/**
 
-│                       ├── createdFiles.lst
+**│                       ├── createdFiles.lst**
 
-│                       └── inputFiles.lst
+**│                       └── inputFiles.lst**
 
-├── ds/                          # Data Science / Machine Learning
+**├── ds/                          # Data Science / Machine Learning**
 
-│   ├── app/
+**│   ├── app/**
 
-│   │   ├── dashboard.py
+**│   │   ├── dashboard.py**
 
-│   │   ├── hello.py
+**│   │   ├── hello.py**
 
-│   │   └── main.py
+**│   │   └── main.py**
 
-│   ├── data/
+**│   ├── data/**
 
-│   │   └── flights2015.csv
+**│   │   └── flights2015.csv**
 
-│   ├── model/
+**│   ├── model/**
 
-│   │   └── flight\_delay\_model.joblib
+**│   │   └── flight\_delay\_model.joblib**
 
-│   ├── notebook\_flight\_on\_time.ipynb
+**│   ├── notebook\_flight\_on\_time.ipynb**
 
-│   └── requirements.txt
+**│   └── requirements.txt**
 
-├── README.md                    # Documentación del proyecto
+**├── README.md                    # Documentación del proyecto**
 
-└── .gitignore                   # Archivos ignorados por Git
+**└── .gitignore                   # Archivos ignorados por Git**
 
 
 
