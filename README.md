@@ -70,10 +70,13 @@ Se utiliza **CatBoostClassifier** con ingeniería de variables de fecha, hora y 
 }
  ````
 **Salida (predicción del modelo):**
+
+```bash
 {
   "prevision": "Retrasado",
   "probabilidad": 0.82
 }
+````
 
 **📊 Resultados del modelo- Umbral fijo: 0.7912**
 - Precisión: 0.76
