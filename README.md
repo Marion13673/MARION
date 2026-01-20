@@ -192,9 +192,12 @@ Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de
 
 - Los datasets grandes están versionados con Git LFS.
 Asegúrate de ejecutar:
-
+``Bash
 git lfs install
+````
+``Bash
 git lfs pull
+````
 
 ## 🤝 Contribución
 
@@ -292,7 +295,7 @@ Se utiliza **CatBoostClassifier** con ingeniería de variables de fecha, hora y 
 
 **Entrada (features de un vuelo):**
 
-```bash
+```
 {
   "AEROLINEA": "LATAM",
   "AEROPUERTO_ORIGEN": "SCL",
@@ -310,7 +313,7 @@ Se utiliza **CatBoostClassifier** con ingeniería de variables de fecha, hora y 
  ````
 **Salida (predicción del modelo):**
 
-```bash
+```
 {
   "prevision": "Retrasado",
   "probabilidad": 0.82
