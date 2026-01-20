@@ -175,11 +175,18 @@ mvnd spring-boot:run
   > - Día de la semana
   > - Distancia (km)
 
-**- Target:** retrasado (0 puntual, 1 retrasado)
+**- Target:** `RETRASO_GRAVE`  
+(0 = vuelo puntual, 1 = retraso grave ≥ 30 minutos)
 
-**- Algoritmo:** Logistic Regression con OneHotEncoder para variables categóricas.
+**- Algoritmo:** CatBoostClassifier  
+Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de OneHotEncoder.
 
-**- Métricas:** Accuracy, Precision, Recall, F1.
+**- Métricas de evaluación:**  
+- Accuracy  
+- Precision  
+- Recall  
+- F1-score  
+- ROC-AUC (para medir capacidad de discriminación global)
 
 **⚠️ Notas**
 
@@ -196,6 +203,31 @@ git lfs pull
 - Haz commit de tus cambios.
 - Haz push a la rama.
 - Abre un Pull Request.
+## 🤝 Contribución
+
+¡Gracias por tu interés en contribuir! Para mantener un flujo de trabajo ordenado:
+
+1. Haz un **fork** de este repositorio.
+2. Crea una rama descriptiva para tu aporte:
+     
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ````
+3. Realiza tus cambios y haz commit con mensajes claros:
+    
+    ```bash
+   git commit -m "Agrega validación de retrasos graves en API"
+   ````
+4. Haz push a tu rama:
+   
+   ```bash
+   git push origin feature/nueva-funcionalidad
+   ````
+5. Abre un Pull Request explicando:
+   
+    - Qué problema resuelve.
+    - Qué cambios introduces.
+    - Cómo probarlos.
 
 **🌙 En resumen:**
 
