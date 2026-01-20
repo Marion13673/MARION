@@ -22,7 +22,6 @@ El proyecto combina:
 
 ---
 
-
 ## 📂 Estructura del proyecto
 ````
 Prediccion-de-Retrasos-de-Vuelos/
@@ -98,7 +97,6 @@ Prediccion-de-Retrasos-de-Vuelos/
 - templates/ → Vistas HTML (form.html y result.html).
 - model/ → Carpeta donde se guarda el modelo entrenado (flight_delay_model.joblib).
 - README.md → Guía de uso y documentación del proyecto.
-
 
 ## 🚀 Cómo ejecutar
 
@@ -232,15 +230,6 @@ git lfs pull
  Este README da una guía para entrenar el modelo, correr el backend y usar tanto la API REST como el formulario web.  
 
 
-**📜 Licencia**
-Este proyecto se distribuye bajo la licencia MIT.
-
-
-
-
-
-
-
 
 # ✈️ Predicción de Retrasos de Vuelos con CatBoost
 
@@ -348,7 +337,9 @@ Variables principales:
 - Fecha y hora de partida/llegada
 - Retrasos por causa (clima, aerolínea, sistema aéreo, seguridad, avión tardío)
 
-**📜 LicenciaEste proyecto se distribuye bajo la licencia MIT.**
+**📜 Licencia**
+
+Este proyecto se distribuye bajo la licencia MIT.
 
 
 
