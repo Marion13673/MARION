@@ -5,8 +5,10 @@
 FlightOnTime es una aplicación que permite **predecir retrasos de vuelos** a partir de datos como aerolínea, origen, destino, fecha de partida y distancia.
 
 El proyecto combina:
-- **Backend en Spring Boot** para exponer endpoints REST y formularios web con Thymeleaf.
-- **Modelo de Machine Learning en Python (scikit-learn)** entrenado con datos históricos de vuelos.
+
+- **Backend en Spring Boot** para exponer endpoints REST y formularios web con Thymeleaf.  
+- **Modelo de Machine Learning en Python (CatBoostClassifier)** entrenado con datos históricos de vuelos.  
+- **Integración entre ambos componentes:** el backend en Java consume el modelo entrenado en Python para predecir retrasos graves y exponer resultados vía API.
 
 ---
 
