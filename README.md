@@ -137,7 +137,7 @@ mvnd spring-boot:run
 **- POST /predict**
 
 **Recibe un JSON con los datos del vuelo y devuelve la predicción.**
-
+````
 {
   "aerolinea": "LATAM",
   "origen": "SCL",
@@ -147,7 +147,7 @@ mvnd spring-boot:run
 }
 
 **- Respuesta:**
-
+````
 {
   "prevision": "Retrasado",
   "probabilidad": 0.821,
@@ -159,7 +159,7 @@ mvnd spring-boot:run
     "dia_semana": 6
   }
 }
-
+````
 **Interfaz Web**
 
 - GET /form → muestra formulario HTML.
@@ -196,13 +196,6 @@ Asegúrate de ejecutar:
 git lfs install
 git lfs pull
 
-**🤝 Contribución**
-
-- Haz un fork del repositorio.
-- Crea una rama (feature/nueva-funcionalidad).
-- Haz commit de tus cambios.
-- Haz push a la rama.
-- Abre un Pull Request.
 ## 🤝 Contribución
 
 ¡Gracias por tu interés en contribuir! Para mantener un flujo de trabajo ordenado:
