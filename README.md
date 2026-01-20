@@ -145,7 +145,7 @@ mvnd spring-boot:run
   "fecha_partida": "2026-01-10T15:00:00",
   "distancia_km": 8200
 }
-
+````
 **- Respuesta:**
 ````
 {
