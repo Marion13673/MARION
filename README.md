@@ -109,25 +109,9 @@ Prediccion-de-Retrasos-de-Vuelos/
 
 ## 🚀 Cómo ejecutar
 
-**1. Entrenar el modelo en Python**
+## Entrenar el modelo FastAPI,Python → microservicio de predicción, corre en http://localhost:5000
 
-```bash
-cd ds
-pip install -r requirements.txt
-````
-- **pip install** instala librerías de Python.
-- El parámetro **-r requirements.txt** le dice a pip que lea el archivo requirements.txt, donde están listadas todas las dependencias necesarias para el proyecto.
-  
-- Dependencias que se encuentran en el archivo:
-  
-    - fastapi==0.115.2            # Framework web moderno y rápido para crear APIs en Python
-    - uvicorn[standard]==0.30.0   # Servidor ASGI ligero que ejecuta aplicaciones FastAPI
-    - pandas==2.2.2               # Librería para manejo y análisis de datos tabulares (DataFrames)
-    - scikit-learn==1.3.2         # Conjunto de algoritmos clásicos de machine learning y utilidades
-    - joblib==1.3.2               # Herramienta para guardar y cargar modelos entrenados (serialización)
-    - catboost==1.2.5             # Algoritmo de gradient boosting optimizado para variables categóricas
-
-**2. Entrenar el modelo FastAPI,Python** → microservicio de predicción, corre en http://localhost:5000
+**1.Ingresar a la carpeta ds ** 
 
 ```Bash
 cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/ds
@@ -143,6 +127,19 @@ source venv310/Scripts/activate   # en Git Bash o PowerShell
 ```Bash
 python -m pip install -r requirements.txt
 ````
+- **pip install** instala librerías de Python.
+- El parámetro **-r requirements.txt** le dice a pip que lea el archivo requirements.txt, donde están listadas todas las dependencias necesarias para el proyecto.
+  
+- Dependencias que se encuentran en el archivo:
+  
+    - fastapi==0.115.2            # Framework web moderno y rápido para crear APIs en Python
+    - uvicorn[standard]==0.30.0   # Servidor ASGI ligero que ejecuta aplicaciones FastAPI
+    - pandas==2.2.2               # Librería para manejo y análisis de datos tabulares (DataFrames)
+    - scikit-learn==1.3.2         # Conjunto de algoritmos clásicos de machine learning y utilidades
+    - joblib==1.3.2               # Herramienta para guardar y cargar modelos entrenados (serialización)
+    - catboost==1.2.5             # Algoritmo de gradient boosting optimizado para variables categóricas
+    - xgboost
+      
 **- Verifica que se instalaron:**
 
 ```Bash
@@ -168,12 +165,10 @@ python -m ds.scripts.test_model
 Esto:
 
 Carga ds/model/cat_model.joblib
-
 Ejecuta una predicción de ejemplo
-
 Imprime probabilidad y clasificación (Retrasado/Puntual)
 
-**- correr el servicio:**
+**- Levantar API con FastAPI:**
 
 ```Bash
 python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --port 5000
@@ -181,6 +176,7 @@ python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --por
 **El servidor se levanta en:**
 
 - http://127.0.0.1:5000/docs → sí muestra interfaz (Swagger).
+
 
 - curl: http://127.0.0.1:5000/predict
     
