@@ -79,13 +79,22 @@ Prediccion-de-Retrasos-de-Vuelos/
 ├── ds/                          # Data Science / Machine Learning
 │   ├── app/
 │   │   ├── dashboard.py
-│   │   ├
 │   │   └── main.py
 │   ├── data/
-│   │   └── flights2015.csv
+│   │   └── flight_clean.csv
 │   ├── model/
 │   │   └── flight_delay_model.joblib
-│   ├── notebook_flight_on_time.ipynb
+│   ├── notebooks/
+|   |   └── notebook_flight_on_time.ipynb
+|   |__ scripts/
+|   |   └── entrenar.py
+|   |   └── test_model.py
+|   |__ service
+|   |    └── init.py
+|   |    └── predictor_service.py 
+|   |__ venv310/
+|   |__ init.py
+|   |__ modelos_retraso.py
 │   └── requirements.txt
 ├── README.md                    # Documentación del proyecto
 └── .gitignore                   # Archivos ignorados por Git
@@ -121,7 +130,7 @@ pip install -r requirements.txt
 **2. Entrenar el modelo FastAPI,Python** → microservicio de predicción, corre en http://localhost:5000
 
 ```Bash
-cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos
+cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/ds
 ````
 **- Instalar y crear un entorno virtual**
 
@@ -132,19 +141,38 @@ source venv310/Scripts/activate   # en Git Bash o PowerShell
 **- Instalar las dependencias necesarias con:**
 
 ```Bash
-python -m pip install --upgrade pip
-python -m pip install catboost fastapi uvicorn joblib scikit-learn pandas numpy
+python -m pip install -r requirements.txt
 ````
 **- Verifica que se instalaron:**
 
 ```Bash
 python -m pip list
 ````
-**-Entrenar el modelo CatBoost:**
+**-Entrenar el modelos:**
+Ejecuta el script de entrenamiento desde la raíz del proyecto: cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/
 
 ```Bash
-python entrenar.py
+python -m ds.scripts.entrenar
 ````
+Esto:
+Carga ds/data/flight_clean.csv
+Entrena modelos XGBoost y CatBoost
+Guarda resultados en ds/model/
+Genera curva de aprendizaje en ds/model/catboost_learning_curve.png
+
+**-Probar modelo**
+
+```Bash
+python -m ds.scripts.test_model
+````
+Esto:
+
+Carga ds/model/cat_model.joblib
+
+Ejecuta una predicción de ejemplo
+
+Imprime probabilidad y clasificación (Retrasado/Puntual)
+
 **- correr el servicio:**
 
 ```Bash
