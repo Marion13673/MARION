@@ -118,7 +118,7 @@ pip install -r requirements.txt
     - joblib==1.3.2               # Herramienta para guardar y cargar modelos entrenados (serialización)
     - catboost==1.2.5             # Algoritmo de gradient boosting optimizado para variables categóricas
 
-**2. Entrenar el modelo FastAPI**
+**2. Entrenar el modelo FastAPI,Python** → microservicio de predicción, corre en http://localhost:5000
 
 ```Bash
 cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos
@@ -165,6 +165,70 @@ curl -X POST "http://127.0.0.1:5000/predict" \
 - Backend Java: tu controlador Spring Boot enviará el POST y recibirá el JSON para mostrarlo en result.html.
   
 - http://127.0.0.1:5000/predict → solo responde a POST con JSON, no a GET en navegador.
+
+**3. Entrenar el modelo Backend Java (Spring Boot,java)** → backend web, maneja el formulario y las vistas Thymeleaf, corre en http://localhost:8080
+
+```Bash
+cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/be
+````
+**- Instalar y crear un entorno virtual**
+
+**📌 Pasos para instalar mvnd**
+
+**a. Requisitos previos**
+
+- Java JDK 8+ (ideal JDK 17 si trabajas con Spring Boot 3.x).
+- Configura la variable de entorno JAVA_HOME apuntando al directorio de tu JDK.
+- Verificar con:
+```Bash  
+java -version
+````
+
+2. Métodos de instalación
+   
+|            Método                |                               Comando / Acción                                 |               Notas                           |
+|----------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------|
+| SDKMAN! (Linux/Mac)              | sdk install mvnd                                                               | Instala automáticamente y gestiona versiones. | 
+| Homebrew (Mac)                   | brew install mvnd                                                              | Rápido si ya usas Homebrew.                   | 
+| Manual (Windows/Linux/Mac)       | Descarga el binario desde GitHub mvnd README, descomprime y agrega bin al PATH.| Útil si no usas gestores de paquetes.         |
+|                                  | binPATH                                                                        |                                               | 
+
+
+**- Configurar variables de entorno**
+- Windows (PowerShell):
+setx PATH "%PATH%;C:\Program Files\mvnd\bin"
+- Linux/Mac (bash/zsh):
+export PATH=$PATH:/opt/mvnd/bin
+
+
+4. Verificar instalación
+Ejecuta:
+mvnd -v
+
+
+Deberías ver la versión de mvnd y la de Maven que utiliza.
+
+📂 Archivos clave de mvnd
+- mvnd / mvnd.cmd → ejecutables para Linux/Mac y Windows.
+- bin/ → carpeta con los binarios.
+- conf/ → configuración interna.
+- pom.xml → tu proyecto Maven, necesario para compilar.
+
+⚠️ Riesgos y consideraciones
+- mvnd acelera las compilaciones usando un daemon (similar a Gradle).
+- Si tu proyecto no tiene pom.xml, mvnd no funcionará.
+- Solo debes usarlo en proyectos Java/Maven (como tu carpeta be).
+
+✅ Con esto ya puedes instalar mvnd y usarlo en tu backend Spring Boot con comandos como:
+mvnd clean
+mvnd compile
+mvnd spring-boot:run
+
+
+👉 ¿Quieres que te prepare un checklist específico para Windows (descarga, variables de entorno, prueba con pom.xml) para que lo tengas como guía rápida en tu hackathon?
+
+
+
 
 
 **Esto genera el archivo:**
