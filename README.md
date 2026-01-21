@@ -248,7 +248,7 @@ java -version
 |----------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------|
 | SDKMAN! (Linux/Mac)              | sdk install mvnd                                                                 | Instala automáticamente y gestiona versiones. | 
 | Homebrew (Mac)                   | brew install mvnd                                                                | Rápido si ya usas Homebrew.                   | 
-| Manual (Windows/Linux/Mac)       | Descargar el binario desde: GitHub mvnd README, descomprime y agrega bin al PATH | Útil si no usas gestores de paquetes.         |
+| Manual (Windows/Linux/Mac)       | Descargar el binario desde: https://maven.apache.org/download.cgi ó GitHub mvnd README, descomprime y agrega bin al PATH | Útil si no usas gestores de paquetes.         |
                                                                                                                                                           
 
 
