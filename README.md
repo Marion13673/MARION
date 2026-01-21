@@ -111,7 +111,7 @@ Prediccion-de-Retrasos-de-Vuelos/
 
 ## Entrenar el modelo FastAPI,Python → microservicio de predicción, corre en http://localhost:5000
 
-**1.Ingresar a la carpeta ds ** 
+**- Ingresar a la carpeta ds** 
 
 ```Bash
 cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/ds
