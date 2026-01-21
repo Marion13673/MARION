@@ -106,12 +106,66 @@ Prediccion-de-Retrasos-de-Vuelos/
 cd ds
 pip install -r requirements.txt
 ````
+- **pip install** instala librerías de Python.
+- El parámetro **-r requirements.txt** le dice a pip que lea el archivo requirements.txt, donde están listadas todas las dependencias necesarias para el proyecto.
+  
+- Dependencias que se encuentran en el archivo:
+  
+    - fastapi==0.115.2            # Framework web moderno y rápido para crear APIs en Python
+    - uvicorn[standard]==0.30.0   # Servidor ASGI ligero que ejecuta aplicaciones FastAPI
+    - pandas==2.2.2               # Librería para manejo y análisis de datos tabulares (DataFrames)
+    - scikit-learn==1.3.2         # Conjunto de algoritmos clásicos de machine learning y utilidades
+    - joblib==1.3.2               # Herramienta para guardar y cargar modelos entrenados (serialización)
+    - catboost==1.2.5             # Algoritmo de gradient boosting optimizado para variables categóricas
 
-**2. Entrenar el modelo**
+**2. Entrenar el modelo FastAPI**
 
-```bash
+```Bash
+cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos
+````
+**- Instalar y crear un entorno virtual**
+
+```Bash
+python3.10 -m venv venv310
+source venv310/Scripts/activate   # en Git Bash o PowerShell
+````
+**- Instalar las dependencias necesarias con:**
+
+```Bash
+python -m pip install --upgrade pip
+python -m pip install catboost fastapi uvicorn joblib scikit-learn pandas numpy
+````
+**- Verifica que se instalaron:**
+
+```Bash
+python -m pip list
+````
+**-Entrenar el modelo CatBoost:**
+
+```Bash
 python entrenar.py
 ````
+**- correr el servicio:**
+
+```Bash
+python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --port 5000
+````
+**El servidor se levanta en:**
+
+- http://127.0.0.1:5000/docs → sí muestra interfaz (Swagger).
+
+- curl: http://127.0.0.1:5000/predict
+    
+```Bash
+curl -X POST "http://127.0.0.1:5000/predict" \
+     -H "Content-Type: application/json" \
+     -d '{"aerolinea":"LATAM","numeroVuelo":"LA123","origen":"SCL","destino":"LIM","fecha_partida":"2026-01-21T10:30:00","distancia_km":2450}'
+````
+- Postman/Insomnia: crea una request POST con el mismo JSON.
+- Backend Java: tu controlador Spring Boot enviará el POST y recibirá el JSON para mostrarlo en result.html.
+  
+- http://127.0.0.1:5000/predict → solo responde a POST con JSON, no a GET en navegador.
+
 
 **Esto genera el archivo:**
 
