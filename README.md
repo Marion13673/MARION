@@ -168,7 +168,7 @@ Carga ds/model/cat_model.joblib
 Ejecuta una predicción de ejemplo
 Imprime probabilidad y clasificación (Retrasado/Puntual)
 
-**- Levantar API con FastAPI:**
+**- Levantar API con RestAPI:**
 
 ```Bash
 python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --port 5000
@@ -177,20 +177,7 @@ python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --por
 
 - http://127.0.0.1:5000/docs → sí muestra interfaz (Swagger).
 
-
-- curl: http://127.0.0.1:5000/predict
-    
-```Bash
-curl -X POST "http://127.0.0.1:5000/predict" \
-     -H "Content-Type: application/json" \
-     -d '{"aerolinea":"LATAM","numeroVuelo":"LA123","origen":"SCL","destino":"LIM","fecha_partida":"2026-01-21T10:30:00","distancia_km":2450}'
-````
-- Postman/Insomnia: crea una request POST con el mismo JSON.
-- Backend Java: tu controlador Spring Boot enviará el POST y recibirá el JSON para mostrarlo en result.html.
-  
-- http://127.0.0.1:5000/predict → solo responde a POST con JSON, no a GET en navegador.
-
-  **📑 Endpoints**: 
+**📑 Endpoints**: 
 
 **REST API**
 **- POST /predict**
@@ -248,6 +235,24 @@ Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de
 - ROC-AUC (para medir capacidad de discriminación global)
 
 
+
+**Levantar API con FastAPI**: curl: http://127.0.0.1:5000/predict
+
+```Bash
+python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --port 5000
+````
+    
+```Bash
+curl -X POST "http://127.0.0.1:5000/predict" \
+     -H "Content-Type: application/json" \
+     -d '{"aerolinea":"LATAM","numeroVuelo":"LA123","origen":"SCL","destino":"LIM","fecha_partida":"2026-01-21T10:30:00","distancia_km":2450}'
+````
+- Postman/Insomnia: crea una request POST con el mismo JSON.
+- Backend Java: tu controlador Spring Boot enviará el POST y recibirá el JSON para mostrarlo en result.html.
+  
+- http://127.0.0.1:5000/predict → solo responde a POST con JSON, no a GET en navegador.
+
+ 
 **3. Entrenar el modelo Backend Java (Spring Boot,java)** → backend web, maneja el formulario y las vistas Thymeleaf, corre en http://localhost:8080
 
 ```Bash
