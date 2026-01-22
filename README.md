@@ -298,6 +298,7 @@ cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos
 python -m ds.scripts.entrenar
 ````
 Esto:
+
 Carga ds/data/flight_clean.csv
 
 Entrena modelos XGBoost y CatBoost
