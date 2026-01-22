@@ -244,7 +244,7 @@ Este proyecto implementa un modelo de Machine Learning para predecir retrasos gr
 Se utiliza CatBoostClassifier junto con ingeniería de variables de fecha, hora y características del vuelo.
 El microservicio se expone vía FastAPI en http://localhost:5000.
 
----
+
 ## 🚀 Cómo ejecutar el proyecto
 
 **1. Clonar el repositorio:**
