@@ -410,6 +410,61 @@ Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de
 - ROC-AUC (para medir capacidad de discriminación global)
 
 ---
+## 📡 Ejemplo de petición y respuesta
+
+**Entrada (features de un vuelo):**
+
+```
+{
+  "AEROLINEA": "LATAM",
+  "AEROPUERTO_ORIGEN": "SCL",
+  "AEROPUERTO_DESTINO": "JFK",
+  "DISTANCIA": 8200,
+  "DIA_SEMANA": 2,
+  "MES_PARTIDA": 1,
+  "ES_FIN_DE_SEMANA": 0,
+  "TEMPORADA": "Verano",
+  "HORA_LLEGADA": 14,
+  "FRANJA_HORARIA_LLEGADA": "Tarde",
+  "LLEGADA_PROGRAMA": 13,
+  "FRANJA_LLEGADA_PROGRAMA": "Tarde"
+}
+ ````
+**Salida (predicción del modelo):**
+
+```
+{
+  "prevision": "Retrasado",
+  "probabilidad": 0.82
+}
+````
+
+**📊 Resultados del modelo- Umbral fijo: 0.7912**
+- Precisión: 0.76
+- Recall: 0.77
+- F1-score: 0.76
+- ROC-AUC: 0.97
+  
+**Matriz de confusión**
+
+```bash
+[[1002183   31512]
+ [  29915  100206]]
+````
+--- 
+## 📂 Dataset utilizado
+
+Se emplea el dataset de vuelos históricos de EE.UU. (2015), disponible en el repositorio del Bureau of Transportation Statistics (BTS):
+
+👉 On-Time Performance Dataset (transtats.bts.gov in Bing)
+
+Variables principales:
+
+- Aerolínea
+- Aeropuerto origen/destino
+- Fecha y hora de partida/llegada
+- Retrasos por causa (clima, aerolínea, sistema aéreo, seguridad, avión tardío)
+
 
 **📡 Ejemplo de consumo**
 
@@ -426,6 +481,9 @@ curl -X POST "http://127.0.0.1:5000/predict" \
 - http://127.0.0.1:5000/predict → solo responde a POST con JSON, no a GET en navegador.
 
  
+**📜 Licencia**
+
+Este proyecto se distribuye bajo la licencia MIT.
 
 
 # ✈️ Predicción de Retrasos de Vuelos con CatBoost
