@@ -427,6 +427,7 @@ Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de
 - ROC-AUC: 0.97
 
  **Curva ROC  
+ 
 ![Curva ROC](images/Curva ROC.png)
 
 **Matriz de confusión**
