@@ -204,39 +204,8 @@ git lfs install
 git lfs pull
 ````
 
-## 🤝 Contribución
+ - Esta parte del README da una guía para entrenar el modelo, correr el backend y usar tanto la API REST como el formulario web.  
 
-¡Gracias por tu interés en contribuir! Para mantener un flujo de trabajo ordenado:
-
-
-1. Haz un **fork** de este repositorio.
-
-2. Crea una rama descriptiva para tu aporte:
-     
-   ```bash
-   git checkout -b feature/nueva-funcionalidad
-   ```
-3. Realiza tus cambios y haz commit con mensajes claros:
-    
-    ```bash
-   git commit -m "Agrega validación de retrasos graves en API"
-   ````
-4. Haz push a tu rama:
-   
-   ```bash
-   git push origin feature/nueva-funcionalidad
-   ````
-5. Abre un Pull Request explicando:
-   
-    - Qué problema resuelve.
-    - Qué cambios introduces.
-    - Cómo probarlos.
-
-**🌙 En resumen:**
-
- Este README da una guía para entrenar el modelo, correr el backend y usar tanto la API REST como el formulario web.  
-
-  
 ---
 # ✈️ Predicción de Retrasos de Vuelos con CatBoost**
 
@@ -479,6 +448,35 @@ curl -X POST "http://127.0.0.1:5000/predict" \
 **- Backend Java (Spring Boot):** El controlador enviará el POST y recibirá el JSON para mostrarlo en **result.html**.
   
 - http://127.0.0.1:5000/predict → solo responde a POST con JSON, no a GET en navegador.
+
+  ## 🤝 Contribución
+
+¡Gracias por tu interés en contribuir! Para mantener un flujo de trabajo ordenado:
+
+
+1. Haz un **fork** de este repositorio.
+
+2. Crea una rama descriptiva para tu aporte:
+     
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ```
+3. Realiza tus cambios y haz commit con mensajes claros:
+    
+    ```bash
+   git commit -m "Agrega validación de retrasos graves en API"
+   ````
+4. Haz push a tu rama:
+   
+   ```bash
+   git push origin feature/nueva-funcionalidad
+   ````
+5. Abre un Pull Request explicando:
+   
+    - Qué problema resuelve.
+    - Qué cambios introduces.
+    - Cómo probarlos.
+
 
  
 **📜 Licencia**
