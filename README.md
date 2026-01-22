@@ -212,6 +212,7 @@ git lfs pull
  - Esta parte del README da una guía para entrenar el modelo, correr el backend y usar tanto la API REST como el formulario web.  
 
 ---
+---
 # ✈️ Predicción de Retrasos de Vuelos con CatBoost**
 
 ## 📌 Descripción**
@@ -220,7 +221,7 @@ Este proyecto implementa un modelo de Machine Learning para predecir retrasos gr
 Se utiliza CatBoostClassifier junto con ingeniería de variables de fecha, hora y características del vuelo.
 El microservicio se expone vía FastAPI en http://localhost:5000.
 
-
+---
 ## 🚀 Cómo ejecutar el proyecto
 
 **1. Clonar el repositorio:**
@@ -229,17 +230,20 @@ El microservicio se expone vía FastAPI en http://localhost:5000.
    git clone <URL-del-repo>
    cd BackEnd/Prediccion-de-Retrasos-de-Vuelos/ds
    ````
+---
 **2. Ingresar a la carpeta del microservicio** 
 
 ```Bash
 cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/ds
 ````
+---
 **3. Crear y activar entorno virtual**
 
 ```Bash
 python3.10 -m venv venv310
 source venv310/Scripts/activate   # en Git Bash o PowerShell
 ````
+---
 **4. Instalar dependencias**
 
 ```Bash
@@ -264,6 +268,7 @@ Verificar instalación
 ```Bash
 python -m pip list
 ````
+---
 **5. Entrenar el modelo:**
 Ejecuta el script de entrenamiento desde la raíz del proyecto: 
 
@@ -282,7 +287,6 @@ Guarda resultados en ds/model/
 Genera curva de aprendizaje en ds/model/catboost_learning_curve.png
 
 ---
-
 **6. Probar el modelo**
 
 ```Bash
@@ -303,12 +307,13 @@ Imprime probabilidad y clasificación (Retrasado/Puntual)
 cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/ds
  python modelos_retraso.py
 ````
-
+---
 **8. El modelo entrenado se guarda en:**
 
 ```bash
 ds/model/cat_model.joblib
 ````
+---
 **9. Levantar API con FastAPI:**
 
 ```Bash
