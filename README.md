@@ -299,8 +299,11 @@ python -m ds.scripts.entrenar
 ````
 Esto:
 Carga ds/data/flight_clean.csv
+
 Entrena modelos XGBoost y CatBoost
+
 Guarda resultados en ds/model/
+
 Genera curva de aprendizaje en ds/model/catboost_learning_curve.png
 
 ---
@@ -313,7 +316,9 @@ python -m ds.scripts.test_model
 Esto:
 
 Carga ds/model/cat_model.joblib
+
 Ejecuta una predicción de ejemplo
+
 Imprime probabilidad y clasificación (Retrasado/Puntual)
 
 ---
