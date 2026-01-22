@@ -112,6 +112,8 @@ El backend web maneja el formulario y las vistas con Thymeleaf. Corre en:
 👉 http://localhost:8080
 
 ---
+# Pasos para habiilitar y ejecutar 
+
 **1. Clonar el repositorio:**
    
    ```bash
@@ -191,6 +193,7 @@ mvnd clean
 mvnd compile
 mvnd spring-boot:run
 ````
+---
 **7. El servidor se levanta en:**
 
 http://localhost:8080
