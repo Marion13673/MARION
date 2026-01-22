@@ -199,21 +199,23 @@ http://localhost:8080
 - Los datasets grandes están versionados con Git LFS.
 Asegúrate de ejecutar:
 
-``Bash
+````Bash
 git lfs install
 git lfs pull
 ````
 
-## 🤝 Contribución
+**🤝 Contribución**
 
 ¡Gracias por tu interés en contribuir! Para mantener un flujo de trabajo ordenado:
 
+
 1. Haz un **fork** de este repositorio.
+
 2. Crea una rama descriptiva para tu aporte:
      
    ```bash
    git checkout -b feature/nueva-funcionalidad
-   ````
+   ```
 3. Realiza tus cambios y haz commit con mensajes claros:
     
     ```bash
