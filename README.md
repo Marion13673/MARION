@@ -112,7 +112,7 @@ El backend web maneja el formulario y las vistas con Thymeleaf. Corre en:
 👉 http://localhost:8080
 
 ---
-# Pasos para habiilitar y ejecutar 
+# Pasos para habilitar y ejecutar 
 
 **1. Clonar el repositorio:**
    
