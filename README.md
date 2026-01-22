@@ -215,7 +215,7 @@ git lfs pull
 ---
 # ✈️ Predicción de Retrasos de Vuelos con CatBoost**
 
-## 📌 Descripción**
+## 📌 Descripción
 
 Este proyecto implementa un modelo de Machine Learning para predecir retrasos graves de vuelos (≥ 30 minutos).
 Se utiliza CatBoostClassifier junto con ingeniería de variables de fecha, hora y características del vuelo.
