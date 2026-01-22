@@ -336,30 +336,30 @@ El servidor estará disponible en:
 
 **Ejemplo de request:**
 
-``json
+````json
 {
-  "aerolinea": "LATAM",
-  "origen": "SCL",
-  "destino": "JFK",
-  "fecha_partida": "2026-01-10T15:00:00",
-  "distancia_km": 8200
+  "aerolinea": "AA",
+  "origen": "DFW",
+  "destino": "STL",
+  "fecha_partida": "2026-06-15T4:50:00",
+  "distancia_km": 885
 }
-``
+````
 **Ejemplo de respuesta:**
 
-``json
+````json
 {
   "prevision": "Retrasado",
-  "probabilidad": 0.821,
+  "probabilidad": 0.805,
   "features": {
-    "aerolinea": "LATAM",
-    "origen": "SCL",
-    "destino": "JFK",
-    "distancia_km": 8200,
-    "dia_semana": 6
+    "aerolinea": "AA",
+    "origen": "DFW",
+    "destino": "STL",
+    "distancia_km": 885,
+    "dia_semana": 15
   }
 }
-``
+````
 **Interfaz Web**
 
 - GET /form → muestra formulario HTML.
