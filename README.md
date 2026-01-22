@@ -31,7 +31,7 @@ Prediccion-de-Retrasos-de-Vuelos/
 │   │   ├── main/
 │   │   │   ├── java/com/flightontime/
 │   │   │   │   ├── controller/
-│   │   │   │   │   ├── @RestController.java
+│   │   │   │   │   ├── RootController.java
 │   │   │   │   │   ├── PredictController.java
 │   │   │   │   │   ├── StatsController.java
 │   │   │   │   │   └── WebController.java
@@ -53,7 +53,8 @@ Prediccion-de-Retrasos-de-Vuelos/
 │       │   ├── application.yml
 │       │   ├── com/flightontime/
 │       │   │   ├── controller/
-|       |   |   |   |__ @RestController.class 
+|       |   |   |   |__ ApiRootController.class
+|       |   |   |   |__ RootController.class
 │       │   │   │   ├── PredictController.class
 │       │   │   │   ├── StatsController.class
 │       │   │   │   └── WebController.class
@@ -83,7 +84,8 @@ Prediccion-de-Retrasos-de-Vuelos/
 │   ├── data/
 │   │   └── flight_clean.csv
 │   ├── model/
-│   │   └── flight_delay_model.joblib
+│   │   └── cat_model.joblib
+|   |   └── catoost_learning_curve.png
 │   ├── notebooks/
 |   |   └── notebook_flight_on_time.ipynb
 |   |__ scripts/
