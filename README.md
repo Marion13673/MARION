@@ -332,7 +332,8 @@ python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --por
 El servidor estará disponible en:
 
 **- Swagger UI:** http://127.0.0.1:5000/docs 
-**- Endpoint principal:** http://127.0.0.1:5000/docs 
+
+**- Endpoint principal:** http://127.0.0.1:5000/predict
 
 ---
 **📑 Endpoints**: 
