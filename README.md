@@ -428,7 +428,7 @@ Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de
 
  **Curva ROC  
  
-![Curva ROC](images/Curva ROC.png)
+![Curva ROC](images/Curva_ROC.png)
 
 **Matriz de confusión**
 
