@@ -99,7 +99,7 @@ Prediccion-de-Retrasos-de-Vuelos/
 ├── README.md                    # Documentación del proyecto
 └── .gitignore                   # Archivos ignorados por Git
 ````
-
+---
 ## 🔎 Explicación:
 - be/ → Todo el backend en Spring Boot (controladores, DTOs, vistas Thymeleaf, configuración).
 - ds/ → Todo lo relacionado con el modelo de ML (dataset, notebooks, scripts, modelo exportado).
@@ -111,20 +111,20 @@ Prediccion-de-Retrasos-de-Vuelos/
 El backend web maneja el formulario y las vistas con Thymeleaf. Corre en:
 👉 http://localhost:8080
 
+---
 **1. Clonar el repositorio:**
    
    ```bash
    git clone <URL-del-repo>
    cd BackEnd/Prediccion-de-Retrasos-de-Vuelos/be
    ````
-
+---
 **2. Ingresar a la carpeta del backend**
 
 ```Bash
 cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/be
 ````
-
-
+---
 **3. Requisitos previos**
 
 - Java JDK 8+ (ideal JDK 17 si trabajas con Spring Boot 3.x).
@@ -134,7 +134,7 @@ cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/be
 ```Bash  
 java -version
 ````
-
+---
 **4. Instalación de mvnd (Maven Daemon)**
 
    
@@ -163,6 +163,7 @@ mvnd -v
 ````
 
 **Deberías ver la versión de mvnd y la de Maven que utiliza.**
+
 ---
 **5. Archivos clave de mvnd**
 
@@ -181,7 +182,7 @@ mvnd -v
 - Si el proyecto no tiene pom.xml, mvnd no funcionará.
   
 - Solo debes usarlo en proyectos Java/Maven (como en la carpeta be).
-
+---
 **6. Compilar y correr el servicio:**
 Con mvnd ya instalado, ejecuta:
 
@@ -194,6 +195,7 @@ mvnd spring-boot:run
 
 http://localhost:8080
 
+---
 **8. Notas adicionales**
 
 - Los datasets grandes están versionados con Git LFS.
