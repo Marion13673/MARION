@@ -204,7 +204,7 @@ git lfs install
 git lfs pull
 ````
 
-**🤝 Contribución**
+## 🤝 Contribución
 
 ¡Gracias por tu interés en contribuir! Para mantener un flujo de trabajo ordenado:
 
