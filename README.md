@@ -102,234 +102,105 @@ Prediccion-de-Retrasos-de-Vuelos/
 
 ## 🔎 Explicación:
 - be/ → Todo el backend en Spring Boot (controladores, DTOs, vistas Thymeleaf, configuración).
-  - ds/ → Todo lo relacionado con el modelo de ML (dataset, notebooks, scripts, modelo exportado).
+- ds/ → Todo lo relacionado con el modelo de ML (dataset, notebooks, scripts, modelo exportado).
 - templates/ → Vistas HTML (form.html y result.html).
 - model/ → Carpeta donde se guarda el modelo entrenado (flight_delay_model.joblib).
 - README.md → Guía de uso y documentación del proyecto.
-
-## 🚀 Cómo ejecutar
-
-## Entrenar el modelo FastAPI,Python → microservicio de predicción, corre en http://localhost:5000
-
-**- Ingresar a la carpeta ds** 
-
-```Bash
-cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/ds
-````
-**- Instalar y crear un entorno virtual**
-
-```Bash
-python3.10 -m venv venv310
-source venv310/Scripts/activate   # en Git Bash o PowerShell
-````
-**- Instalar las dependencias necesarias con:**
-
-```Bash
-python -m pip install -r requirements.txt
-````
-- **pip install** instala librerías de Python.
-- El parámetro **-r requirements.txt** le dice a pip que lea el archivo requirements.txt, donde están listadas todas las dependencias necesarias para el proyecto.
   
-- Dependencias que se encuentran en el archivo:
-  
-    - fastapi==0.115.2            # Framework web moderno y rápido para crear APIs en Python
-    - uvicorn[standard]==0.30.0   # Servidor ASGI ligero que ejecuta aplicaciones FastAPI
-    - pandas==2.2.2               # Librería para manejo y análisis de datos tabulares (DataFrames)
-    - scikit-learn==1.3.2         # Conjunto de algoritmos clásicos de machine learning y utilidades
-    - joblib==1.3.2               # Herramienta para guardar y cargar modelos entrenados (serialización)
-    - catboost==1.2.5             # Algoritmo de gradient boosting optimizado para variables categóricas
-    - xgboost
-      
-**- Verifica que se instalaron:**
+**⚙️ Backend Java (Spring Boot)**
+El backend web maneja el formulario y las vistas con Thymeleaf. Corre en:
+👉 http://localhost:8080
 
-```Bash
-python -m pip list
-````
-**-Entrenar el modelos:**
-Ejecuta el script de entrenamiento desde la raíz del proyecto: cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/
+**1. Clonar el repositorio:**
+   
+   ```bash
+   git clone <URL-del-repo>
+   cd BackEnd/Prediccion-de-Retrasos-de-Vuelos/be
+   ````
 
-```Bash
-python -m ds.scripts.entrenar
-````
-Esto:
-Carga ds/data/flight_clean.csv
-Entrena modelos XGBoost y CatBoost
-Guarda resultados en ds/model/
-Genera curva de aprendizaje en ds/model/catboost_learning_curve.png
-
-**-Probar modelo**
-
-```Bash
-python -m ds.scripts.test_model
-````
-Esto:
-
-Carga ds/model/cat_model.joblib
-Ejecuta una predicción de ejemplo
-Imprime probabilidad y clasificación (Retrasado/Puntual)
-
-**- Levantar API con RestAPI:**
-
-```Bash
-python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --port 5000
-````
-**El servidor se levanta en:**
-
-- http://127.0.0.1:5000/docs → sí muestra interfaz (Swagger).
-
-**📑 Endpoints**: 
-
-**REST API**
-**- POST /predict**
-
-**Recibe un JSON con los datos del vuelo y devuelve la predicción.**
-````
-{
-  "aerolinea": "LATAM",
-  "origen": "SCL",
-  "destino": "JFK",
-  "fecha_partida": "2026-01-10T15:00:00",
-  "distancia_km": 8200
-}
-````
-**- Respuesta:**
-````
-{
-  "prevision": "Retrasado",
-  "probabilidad": 0.821,
-  "features": {
-    "aerolinea": "LATAM",
-    "origen": "SCL",
-    "destino": "JFK",
-    "distancia_km": 8200,
-    "dia_semana": 6
-  }
-}
-````
-**Interfaz Web**
-
-- GET /form → muestra formulario HTML.
-- POST /form → procesa datos y muestra resultado en result.html.
-
-**📊 Modelo de Machine Learning**
-**- Features utilizadas:**
-
-  > - Aerolínea
-  > - Origen
-  > - Destino
-  > - Hora de partida
-  > - Día de la semana
-  > - Distancia (km)
-
-**- Target:** `RETRASO_GRAVE`  
-(0 = vuelo puntual, 1 = retraso grave ≥ 30 minutos)
-
-**- Algoritmo:** CatBoostClassifier  
-Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de OneHotEncoder.
-
-**- Métricas de evaluación:**  
-- Accuracy  
-- Precision  
-- Recall  
-- F1-score  
-- ROC-AUC (para medir capacidad de discriminación global)
-
-
-
-**Levantar API con FastAPI**: curl: http://127.0.0.1:5000/predict
-
-```Bash
-python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --port 5000
-````
-    
-```Bash
-curl -X POST "http://127.0.0.1:5000/predict" \
-     -H "Content-Type: application/json" \
-     -d '{"aerolinea":"LATAM","numeroVuelo":"LA123","origen":"SCL","destino":"LIM","fecha_partida":"2026-01-21T10:30:00","distancia_km":2450}'
-````
-- Postman/Insomnia: crea una request POST con el mismo JSON.
-- Backend Java: tu controlador Spring Boot enviará el POST y recibirá el JSON para mostrarlo en result.html.
-  
-- http://127.0.0.1:5000/predict → solo responde a POST con JSON, no a GET en navegador.
-
- 
-**3. Entrenar el modelo Backend Java (Spring Boot,java)** → backend web, maneja el formulario y las vistas Thymeleaf, corre en http://localhost:8080
+**2. Ingresar a la carpeta del backend**
 
 ```Bash
 cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/be
 ````
-**- Instalar y crear un entorno virtual**
 
-**📌 Pasos para instalar mvnd**
 
-**a. Requisitos previos**
+**3. Requisitos previos**
 
 - Java JDK 8+ (ideal JDK 17 si trabajas con Spring Boot 3.x).
 - Configura la variable de entorno JAVA_HOME apuntando al directorio de tu JDK.
 - Verificar con:
+  
 ```Bash  
 java -version
 ````
 
-**b. Métodos de instalación**
+**4. Instalación de mvnd (Maven Daemon)**
+
    
 |            Método                |                                     Comando / Acción                             |               Notas                           |
 |----------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------|
 | SDKMAN! (Linux/Mac)              | sdk install mvnd                                                                 | Instala automáticamente y gestiona versiones. | 
 | Homebrew (Mac)                   | brew install mvnd                                                                | Rápido si ya usas Homebrew.                   | 
 | Manual (Windows/Linux/Mac)       | Descargar el binario desde: https://maven.apache.org/download.cgi ó GitHub mvnd README, descomprime y agrega bin al PATH | Útil si no usas gestores de paquetes.         |
-                                                                                                                                                          
-
-
-**c. Configurar variables de entorno**
-- Windows (PowerShell):
+                                                                                                                                                   
+Configurar variables de entorno
+**- Windows (PowerShell):**
+  
 ```Bash   
 setx PATH "%PATH%;C:\Program Files\mvnd\bin"
 ````
-- Linux/Mac (bash/zsh):
+**- Linux/Mac (bash/zsh):**
+
 ```Bash 
 export PATH=$PATH:/opt/mvnd/bin
 ````
 
-**d. Verificar instalación**
-Ejecuta:
+Verificar instalación
+
 ```Bash 
 mvnd -v
 ````
 
 **Deberías ver la versión de mvnd y la de Maven que utiliza.**
+---
+**5. Archivos clave de mvnd**
 
-**📂 Archivos clave de mvnd**
 - mvnd / mvnd.cmd → ejecutables para Linux/Mac y Windows.
+  .
 - bin/ → carpeta con los binarios.
+  
 - conf/ → configuración interna.
+  
 - pom.xml → tu proyecto Maven, necesario para compilar.
 
-**⚠️ Riesgos y consideraciones**
+**⚠️ Consideraciones**
+
 - mvnd acelera las compilaciones usando un daemon (similar a Gradle).
+  
 - Si el proyecto no tiene pom.xml, mvnd no funcionará.
+  
 - Solo debes usarlo en proyectos Java/Maven (como en la carpeta be).
 
-**e. correr el servicio:**
-✅ Con esto ya puedes instalar mvnd y usarlo en tu backend Spring Boot con comandos como:
+**6. Compilar y correr el servicio:**
+Con mvnd ya instalado, ejecuta:
 
 ```Bash 
 mvnd clean
 mvnd compile
 mvnd spring-boot:run
 ````
-**El servidor se levanta en:**
+**7. El servidor se levanta en:**
 
 http://localhost:8080
 
-**⚠️ Notas**
+**8. Notas adicionales**
 
 - Los datasets grandes están versionados con Git LFS.
 Asegúrate de ejecutar:
+
 ``Bash
 git lfs install
-````
-``Bash
 git lfs pull
 ````
 
@@ -363,6 +234,174 @@ git lfs pull
 
  Este README da una guía para entrenar el modelo, correr el backend y usar tanto la API REST como el formulario web.  
 
+  
+---
+**✈️ Predicción de Retrasos de Vuelos con CatBoost**
+**📌 Descripción**
+Este proyecto implementa un modelo de Machine Learning para predecir retrasos graves de vuelos (≥ 30 minutos).
+Se utiliza CatBoostClassifier junto con ingeniería de variables de fecha, hora y características del vuelo.
+El microservicio se expone vía FastAPI en http://localhost:5000.
+
+---
+## 🚀 Cómo ejecutar el proyecto
+
+**1. Clonar el repositorio:**
+   
+   ```bash
+   git clone <URL-del-repo>
+   cd BackEnd/Prediccion-de-Retrasos-de-Vuelos/ds
+   ````
+**2. Ingresar a la carpeta del microservicio** 
+
+```Bash
+cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/ds
+````
+**3. Crear y activar entorno virtual**
+
+```Bash
+python3.10 -m venv venv310
+source venv310/Scripts/activate   # en Git Bash o PowerShell
+````
+**4. Instalar dependencias**
+
+```Bash
+python -m pip install -r requirements.txt
+````
+- **pip install** instala librerías de Python.
+- El parámetro **-r requirements.txt** le dice a pip que lea el archivo requirements.txt, donde están listadas todas las dependencias necesarias para el proyecto.
+  
+📑 Dependencias principales:
+  
+    - fastapi==0.115.2            → Framework web moderno y rápido para crear APIs en Python
+    - uvicorn[standard]==0.30.0   → Servidor ASGI ligero que ejecuta aplicaciones FastAPI
+    - pandas==2.2.2               → Librería para manejo y análisis de datos tabulares (DataFrames)
+    - scikit-learn==1.3.2         → Conjunto de algoritmos clásicos de machine learning y utilidades
+    - joblib==1.3.2               → Herramienta para guardar y cargar modelos entrenados (serialización)
+    - catboost==1.2.5             → Algoritmo de gradient boosting optimizado para variables categóricas
+    - xgboost                     → Gradient boosting adicional
+
+      
+Verificar instalación
+
+```Bash
+python -m pip list
+````
+**5. Entrenar el modelo:**
+Ejecuta el script de entrenamiento desde la raíz del proyecto: 
+
+```Bash
+cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos
+python -m ds.scripts.entrenar
+````
+Esto:
+Carga ds/data/flight_clean.csv
+Entrena modelos XGBoost y CatBoost
+Guarda resultados en ds/model/
+Genera curva de aprendizaje en ds/model/catboost_learning_curve.png
+
+---
+
+**6. Probar el modelo**
+
+```Bash
+python -m ds.scripts.test_model
+````
+Esto:
+
+Carga ds/model/cat_model.joblib
+Ejecuta una predicción de ejemplo
+Imprime probabilidad y clasificación (Retrasado/Puntual)
+
+---
+**7. Levantar API con FastAPI:**
+
+```Bash
+python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --port 5000
+````
+**El servidor se levanta en:**
+El servidor estará disponible en:
+
+**- Swagger UI:** http://127.0.0.1:5000/docs 
+**- Endpoint principal:** http://127.0.0.1:5000/docs 
+
+---
+**📑 Endpoints**: 
+
+**REST API**
+**- POST /predict**
+**Recibe un JSON con los datos del vuelo y devuelve la predicción.**
+
+**Ejemplo de request:**
+
+``json
+{
+  "aerolinea": "LATAM",
+  "origen": "SCL",
+  "destino": "JFK",
+  "fecha_partida": "2026-01-10T15:00:00",
+  "distancia_km": 8200
+}
+``
+**Ejemplo de respuesta:**
+
+``json
+{
+  "prevision": "Retrasado",
+  "probabilidad": 0.821,
+  "features": {
+    "aerolinea": "LATAM",
+    "origen": "SCL",
+    "destino": "JFK",
+    "distancia_km": 8200,
+    "dia_semana": 6
+  }
+}
+``
+**Interfaz Web**
+
+- GET /form → muestra formulario HTML.
+- POST /form → procesa datos y muestra resultado en result.html.
+---
+**📊 Modelo de Machine Learning**
+**- Features utilizadas:**
+
+  > - Aerolínea
+  > - Origen
+  > - Destino
+  > - Hora de partida
+  > - Día de la semana
+  > - Distancia (km)
+
+**- Target:** `RETRASO_GRAVE`  
+(0 = vuelo puntual, 1 = retraso grave ≥ 30 minutos)
+
+**- Algoritmo:** CatBoostClassifier  
+Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de OneHotEncoder.
+
+**- Métricas de evaluación:**  
+- Accuracy  
+- Precision  
+- Recall  
+- F1-score  
+- ROC-AUC (para medir capacidad de discriminación global)
+
+---
+
+**📡 Ejemplo de consumo**
+
+## Curl 
+
+```Bash
+curl -X POST "http://127.0.0.1:5000/predict" \
+     -H "Content-Type: application/json" \
+     -d '{"aerolinea":"LATAM","numeroVuelo":"LA123","origen":"SCL","destino":"LIM","fecha_partida":"2026-01-21T10:30:00","distancia_km":2450}'
+````
+**- Postman/Insomnia:** crear una request POST con el mismo JSON.
+**- Backend Java (Spring Boot):** El controlador enviará el POST y recibirá el JSON para mostrarlo en **result.html**.
+  
+- http://127.0.0.1:5000/predict → solo responde a POST con JSON, no a GET en navegador.
+
+ 
 
 
 # ✈️ Predicción de Retrasos de Vuelos con CatBoost
