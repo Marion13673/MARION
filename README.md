@@ -385,18 +385,18 @@ Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de
 
 ```
 {
-  "AEROLINEA": "LATAM",
-  "AEROPUERTO_ORIGEN": "SCL",
-  "AEROPUERTO_DESTINO": "JFK",
-  "DISTANCIA": 8200,
-  "DIA_SEMANA": 2,
-  "MES_PARTIDA": 1,
+  "AEROLINEA": "AA",
+  "AEROPUERTO_ORIGEN": "DFW",
+  "AEROPUERTO_DESTINO": "STL",
+  "DISTANCIA": 885,
+  "DIA_SEMANA": 15,
+  "MES_PARTIDA": 6,
   "ES_FIN_DE_SEMANA": 0,
-  "TEMPORADA": "Verano",
-  "HORA_LLEGADA": 14,
-  "FRANJA_HORARIA_LLEGADA": "Tarde",
-  "LLEGADA_PROGRAMA": 13,
-  "FRANJA_LLEGADA_PROGRAMA": "Tarde"
+  "TEMPORADA": "Invierno",
+  "HORA_LLEGADA": 4:00,
+  "FRANJA_HORARIA_LLEGADA": "Madrugada",
+  "LLEGADA_PROGRAMA": 3:30,
+  "FRANJA_LLEGADA_PROGRAMA": "Madrugada"
 }
  ````
 **Salida (predicción del modelo):**
@@ -404,7 +404,7 @@ Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de
 ```
 {
   "prevision": "Retrasado",
-  "probabilidad": 0.82
+  "probabilidad": 0.805
 }
 ````
 
@@ -438,12 +438,17 @@ Variables principales:
 **📡 Ejemplo de consumo**
 
 ## Curl 
+Abrir otro Bash:
 
 ```Bash
+cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos
 curl -X POST "http://127.0.0.1:5000/predict" \
      -H "Content-Type: application/json" \
-     -d '{"aerolinea":"LATAM","numeroVuelo":"LA123","origen":"SCL","destino":"LIM","fecha_partida":"2026-01-21T10:30:00","distancia_km":2450}'
+     -d '{"aerolinea":"AA","origen":"DFW","destino":"STL","fecha_partida":"2026-06-15T4:50:00","distancia_km":885}'
 ````
+Respuesta:
+{"prevision":"Retrasado","probabilidad":0.805}
+
 **- Postman/Insomnia:** crear una request POST con el mismo JSON.
 **- Backend Java (Spring Boot):** El controlador enviará el POST y recibirá el JSON para mostrarlo en **result.html**.
   
@@ -476,7 +481,6 @@ curl -X POST "http://127.0.0.1:5000/predict" \
     - Qué problema resuelve.
     - Qué cambios introduces.
     - Cómo probarlos.
-
 
  
 **📜 Licencia**
