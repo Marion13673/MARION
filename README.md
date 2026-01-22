@@ -426,7 +426,7 @@ Maneja variables categóricas de forma nativa (`cat_features`), sin necesidad de
 - F1-score: 0.76
 - ROC-AUC: 0.97
 
- **Curva ROC  
+ **Curva ROC-AUC**  
  
 ![Curva ROC](images/Curva_ROC.png)
 
