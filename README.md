@@ -323,11 +323,24 @@ Ejecuta una predicción de ejemplo
 Imprime probabilidad y clasificación (Retrasado/Puntual)
 
 ---
-**7. Levantar API con FastAPI:**
+**7. Ejecutar el script de entrenamiento**
+
+```Bash
+cd ~/User/BackEnd/Prediccion\ de\ Retrasos\ de\ Vuelos/ds
+ python modelos_retraso.py
+````
+
+**8. El modelo entrenado se guarda en:**
+
+```bash
+ds/model/cat_model.joblib
+````
+**9. Levantar API con FastAPI:**
 
 ```Bash
 python -m uvicorn ds.service.predictor_service:app --reload --host 0.0.0.0 --port 5000
-````
+```
+
 **El servidor se levanta en:**
 El servidor estará disponible en:
 
