@@ -205,8 +205,11 @@ Abre el archivo index.html en tu navegador para ver y usar la aplicación.
 
 **Haz un fork del repositorio.**
 Crea una rama con tu nueva característica (git checkout -b feature/nueva-caracteristica).
+
 Realiza tus cambios y haz un commit (git commit -m 'Añadir nueva característica').
+
 Envía tu rama al repositorio remoto (git push origin feature/nueva-caracteristica).
+
 Abre una Pull Request.
 
 # 📜 Licencia** 
