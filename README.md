@@ -104,7 +104,7 @@ El conjunto de datos incluye la siguiente información:
 
 5.- Análisis para reconocer las variables que influyen en los retrasos graves, para ello se realiza un gráfico de barra que se muestra a continuación:
 
-! [Causa más común retraso](images/Causa%20más%20común%20retraso.png)
+![Causa más común retraso](images/Causa_mas_comun_retraso.png)
 
 
  
