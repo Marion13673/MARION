@@ -47,7 +47,7 @@ Manipular datos en **flights2015.parquet**, contribuye a mejorar:
 
 1.- Formato:  Binario, columnas
 
-2.- Compresión:  Alta compresión, ocupa mucho menos
+2.- Compresión:  Alta compresión, ocupa mucho menos espacio
 
 3.- Lectura/Escritura:  Optimizado para lectura selectiva
 
