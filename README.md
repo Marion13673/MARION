@@ -200,7 +200,7 @@ Cuando usar:
 
 **CSV**
 - Cuando necesitas máxima compatibilidad (Excel, Notepad, cualquier lenguaje).
-- 
+  
 - Para compartir datos pequeños con usuarios no técnicos.
 
 
