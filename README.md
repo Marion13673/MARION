@@ -148,7 +148,7 @@ Esta clasificación no corresponde a un estándar oficial de la industria aérea
 - Diferencias: CatBoost amplifica el rol de **SISTEMA_AÉREO y CLIMA**, lo que sugiere que captura mejor interacciones no lineales.
 - Ruido: SEGURIDAD y LLEGADA_PROGRAMA son irrelevantes en todos los enfoques.
 
-El modelo usado para clasificar los retrasos graves corresponde a **"Pipeline de machine learning XGBoost y CatBoost**:
+El modelo usado para clasificar los retrasos graves corresponde a **"Pipeline de machine learning XGBoost y CatBoost"**:
 
 El pipeline completo incluye:
 
@@ -163,7 +163,7 @@ Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 **Rsultados otenidos:**
 
 - Matriz de confusión
-- 
+  
 - Dataset limpio llamado: flight_clean.csv
 
  
@@ -198,7 +198,7 @@ pip install pandas numpy matplotlib
 # 🚀 Instrucciones para Ejecutar
 
 Clona este repositorio en tu máquina local: ´´´bash
-git clone https://github.com/Marion13673/Analisis-ventas-por-tienda.git````
+git clone https://github.com/Marion13673/Analisis-ventas-por-tienda.git
 
 Abre el archivo index.html en tu navegador para ver y usar la aplicación.
 
