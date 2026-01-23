@@ -43,7 +43,7 @@ Usar incluso modelos simples para detectar puntos críticos, aportando valor inm
 
 # Características ✨
 
-Manipular datos en **flights2015.parquet**, contriuyendo a mejorar:
+Manipular datos en **flights2015.parquet**, contribuye a mejorar:
 
 1. Formato:Binario, columnas
 
