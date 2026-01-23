@@ -1,7 +1,4 @@
-Notebook variables explicativas: causas de retrasos graves flights2015.ipynb
 # ✈️FlightOnTime
-# VARIABLES EXPLICATIVAS DE LAS CAUSAS QUE INFLUYEN EN LOS RETRASOS GRAVES
-
 # 🚀 INTRODUCCIÓN 
 
 El proyecto **FlightOnTime** consiste desarrollar una solución predictiva capaz de estimar si un vuelo va a despegar a tiempo o con retraso. 
@@ -40,7 +37,9 @@ Proveer información clara y anticipada que fortalezca la confianza en las aerol
 **6.- Identificar patrones de riesgo en horarios y aeropuertos**
 Usar incluso modelos simples para detectar puntos críticos, aportando valor inmediato al sector.
 
-
+---
+Notebook variables explicativas: causas de retrasos graves flights2015.ipynb
+# VARIABLES EXPLICATIVAS DE LAS CAUSAS QUE INFLUYEN EN LOS RETRASOS GRAVES
 
 # ✨ Características 
 
@@ -165,8 +164,46 @@ Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
   ![Matriz_de_confusión](images/Matriz_de_confusion_final.png)
 
 - Dataset limpio llamado: flight_clean.csv
+
+ --- 
+ Notebook_flight_on_time.ipynb 
+# ✈️FlightOnTime
+# PREDICCIÓN DE RETRASOS DE VUELOS
+
+# 📑 Estructura de datos: 
+
+- Unnamed: 0 → índice automático generado al exportar el archivo (no es una variable relevante).
+- ANO → año del vuelo.
+- MES → mes del vuelo.
+- DIA → día del mes en que se realizó el vuelo.
+- DIA_SEMANA → día de la semana (ej. 1 = lunes, 7 = domingo).
+- AEROLINEA → código de la aerolínea (ej. AS = Alaska Airlines, AA = American Airlines).
+- NUMERO_VUELO → número identificador del vuelo.
+- NUMERO_DEL_AVION → matrícula o tail number del avión.
+- AEROPUERTO_ORIGEN → código IATA del aeropuerto de salida (ej. ANC = Anchorage).
+- AEROPUERTO_DESTINO → código IATA del aeropuerto de llegada (ej. SEA = Seattle).
   
-  
+**✈️ Variables de estado del vuelo**
+- DESVIADO → indica si el vuelo fue desviado (1 = sí, 0 = no).
+- CANCELADO → indica si el vuelo fue cancelado (1 = sí, 0 = no).
+- RAZON_CANCELACION → motivo de cancelación (ej. “No Cancelado”, “Clima”, “Seguridad”).
+
+**⏱️ Variables de retraso**
+- RETRASO_SISTEMA_AEREO → minutos de retraso atribuibles al sistema aéreo (congestión, control de tráfico).
+- RETRASO_SEGURIDAD → minutos de retraso por controles de seguridad.
+- RETRASO_AEROLÍNEA → minutos de retraso por causas internas de la aerolínea (tripulación, mantenimiento).
+- RETRASO_AVIÓN_TARDÍO → minutos de retraso porque el avión llegó tarde de un vuelo anterior.
+- RETRASO_CLIMA → minutos de retraso por condiciones meteorológicas.
+
+ **📈 Variables de resultado**
+- LLEGADA_PROGRAMA → hora de llegada programada (en formato decimal de horas).
+- RETRASO_GRAVE → indicador binario (0/1) de si el retraso fue considerado grave según el umbral definido (>60 min, por ejemplo).
+
+🌌 El dataset combina datos básicos del vuelo, estado operativo (cancelado, desviado) y causas de retraso, lo que permite analizar tanto la puntualidad como los factores que afectan la operación.
+
+
+
+
 
  
 # 📂 Archivos del Proyecto 
