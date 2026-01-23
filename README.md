@@ -43,14 +43,19 @@ Usar incluso modelos simples para detectar puntos críticos, aportando valor inm
 
 # Características ✨
 
-Manipular datos en **flights2015.parquet**:
+Manipular datos en **flights2015.parquet**, contriuyendo a mejorar:
 
-Formato:Binario, columnas
-Compresión:Alta compresión, ocupa mucho menos
-Lectura/Escritura:Optimizado para lectura selectiva
-Estructura:Mantiene tipos (int, float, string, etc.)
-Escalabilidad:Ideal para big data y sistemas distribuidos
-Compatibilidad:Requiere librerías (pandas, pyarrow, spark)
+1. Formato:Binario, columnas
+
+2.- Compresión:Alta compresión, ocupa mucho menos
+
+3.- Lectura/Escritura:Optimizado para lectura selectiva
+
+4.- Estructura:Mantiene tipos (int, float, string, etc.)
+
+5.- Escalabilidad:Ideal para big data y sistemas distribuidos
+
+6.- Compatibilidad:Requiere librerías (pandas, pyarrow, spark)
 
 # Estructura de datos: 📑
 
