@@ -163,6 +163,7 @@ Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 **Rsultados otenidos:**
 
 - Matriz de confusión
+- 
 - Dataset limpio llamado: flight_clean.csv
 
  
@@ -197,7 +198,8 @@ pip install pandas numpy matplotlib
 # 🚀 Instrucciones para Ejecutar
 
 Clona este repositorio en tu máquina local: ´´´bash
-git clone https://github.com/Marion13673/Analisis-ventas-por-tienda.git
+git clone https://github.com/Marion13673/Analisis-ventas-por-tienda.git````
+
 Abre el archivo index.html en tu navegador para ver y usar la aplicación.
 
 # 🤝 Contribuciones
