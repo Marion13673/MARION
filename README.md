@@ -5,32 +5,37 @@
 
 El proyecto **FlightOnTime** consiste desarrollar una solución predictiva capaz de estimar si un vuelo va a despegar a tiempo o con retraso. 
 
-🎯 Objetivos relacionados al cliente
+# 🎯 Objetivos relacionados al cliente
 
-# Para los pasajeros
+## Para los pasajeros
 - Recibir alertas tempranas sobre posibles retrasos antes de salir de casa.
 - Tomar decisiones informadas sobre su itinerario y reducir tiempos de espera innecesarios.
-# Para las aerolíneas
+## Para las aerolíneas
 - Ajustar la operación en función de la probabilidad de retraso.
 - Minimizar el impacto en la programación de vuelos y en la experiencia del cliente.
 - Optimizar recursos como tripulación y mantenimiento preventivo.
-# Para los aeropuertos
+## Para los aeropuertos
 - Planificar mejor el uso de la infraestructura (puertas de embarque, pistas, personal).
 - Reducir la congestión y mejorar la eficiencia operativa.
 - Coordinar con aerolíneas y servicios de apoyo para anticipar escenarios críticos.
 
-- 🎯 Objetivos de mercado
+# 🎯 Objetivos de mercado
   
 **1.- Validar la utilidad de la ciencia de datos en transporte aéreo**
 Demostrar que la predicción de retrasos es una aplicación práctica y con impacto directo en la industria.
+
 **2.- Generar un diferencial competitivo para aerolíneas y startups**
 Ofrecer modelos predictivos que permitan anticipar riesgos y posicionarse como líderes en innovación.
+
 **3.- Mejorar la puntualidad y planificación de flota**
 Facilitar la toma de decisiones estratégicas en la operación diaria, optimizando recursos y horarios.
+
 **4.- Reducir costos operativos y quejas de clientes**
 Minimizar pérdidas asociadas a retrasos y mejorar la percepción del servicio.
+
 **5.- Aumentar la satisfacción del cliente mediante transparencia**
 Proveer información clara y anticipada que fortalezca la confianza en las aerolíneas.
+
 **6.- Identificar patrones de riesgo en horarios y aeropuertos**
 Usar incluso modelos simples para detectar puntos críticos, aportando valor inmediato al sector.
 
