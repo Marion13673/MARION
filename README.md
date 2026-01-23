@@ -130,7 +130,7 @@ El conjunto de datos incluye la siguiente información:
 
 
 
-
+---
 **- RETRASO_AVIÓN_TARDÍO** no es una causa primaria, sino más bien un efecto acumulado. Se refiere a los minutos de retraso que un vuelo hereda porque el avión llegó tarde de un vuelo anterior. Ese retraso puede estar explicado por cualquiera de las otras causas:
   -  RETRASO_CLIMA → si el vuelo anterior se demoró por tormenta.
   -  RETRASO_AEROLÍNEA → si hubo problemas operativos o logísticos.
