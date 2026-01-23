@@ -204,6 +204,7 @@ Abre el archivo index.html en tu navegador para ver y usar la aplicación.
 💡 ¡Las contribuciones son bienvenidas! Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 
 **Haz un fork del repositorio.**
+
 Crea una rama con tu nueva característica (git checkout -b feature/nueva-caracteristica).
 
 Realiza tus cambios y haz un commit (git commit -m 'Añadir nueva característica').
