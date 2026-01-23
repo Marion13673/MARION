@@ -113,7 +113,7 @@ El conjunto de datos incluye la siguiente información:
   -  RETRASO_SISTEMA_AÉREO → congestión en el tráfico aéreo.
   -  RETRASO_SEGURIDAD → inspecciones adicionales.
 
-**📊 Interpretación de retrasos por rango de minuto consideradas en el pryecto para evaluar los retrasos graves.**
+**📊 Interpretación de retrasos por rango de minuto consideradas en el proyecto para evaluar los retrasos graves.**
 
 Esta clasificación no corresponde a un estándar oficial de la industria aérea. Se adopta como convención interna del proyecto, inspirada en prácticas comunes de aerolíneas y autoridades de transporte, para facilitar la interpretación y comunicación de los resultados.
 
