@@ -169,6 +169,7 @@ Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 # 📂 Archivos del Proyecto 
 
 Parquet: Archivos que contienen las bases de datos de cada aerolínea.
+
 Jupyter Notebook: Proyecto desarrollado en Google Colaboratory, utilizando Python y bibliotecas como Pandas para realizar el análisis de datos.
 
 # 💻Lenguaje y Bibliotecas Utilizadas 
