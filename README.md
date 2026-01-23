@@ -158,11 +158,9 @@ Priorizar las dos variables clave (AVIÓN_TARDÍO y AEROLÍNEA).
 Explorar interacciones con SISTEMA_AÉREO y CLIMA, que CatBoost detecta mejor.
 Creación del ensemble (promedio de probabilidades). Esto suaviza las diferencias y equilibra recall y precisión.
 
+**Rsultados otenidos:**
 Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 
-**Rsultados otenidos:**
-
-- Matriz de confusión
   ![Matriz_de_confusión](images/Matriz_de_confusion_final.png)
 
 - Dataset limpio llamado: flight_clean.csv
