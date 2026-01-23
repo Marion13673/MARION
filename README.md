@@ -113,37 +113,70 @@ El conjunto de datos incluye la siguiente información:
   -  RETRASO_SISTEMA_AÉREO → congestión en el tráfico aéreo.
   -  RETRASO_SEGURIDAD → inspecciones adicionales.
 
+📊 Interpretación de retrasos por rango de minuto consideradas en el pryecto para evaluar los retrasos graves.
+
+Esta clasificación no corresponde a un estándar oficial de la industria aérea. Se adopta como convención interna del proyecto, inspirada en prácticas comunes de aerolíneas y autoridades de transporte, para facilitar la interpretación y comunicación de los resultados.
 
 
+| Categoría de retraso | Rango en minutos | Interpretación |
+|----------------------|------------------|----------------|
+|Puntualidad aceptada  | 0–15 | Normal, sin impacto significativo |
+|Retraso leve  |16–30  | Aún tolerable, frecuente en operaciones |
+|Retraso moderado  |31–60  | Ya afecta conexiones y logística |
+| Retraso grave |  >60| Impacto fuerte en pasajeros y aerolínea |
+|Retraso extremo|>180|Casos excepcionales, suelen implicar compensaciones|
 
+Factores correlacionados con retrasos superiores a 30 minutos:
+RETRASO_GRAVE            1.000000
+RETRASO_AVIÓN_TARDÍO     0.535315
+RETRASO_AEROLÍNEA        0.389211
+RETRASO_SISTEMA_AÉREO    0.248072
+RETRASO_CLIMA            0.156599
+LLEGADA_PROGRAMA         0.109532
+RETRASO_SEGURIDAD        0.029881
 
+- Consistencia absoluta: RETRASO_AVIÓN_TARDÍO y RETRASO_AEROLÍNEA son los más fuertes en todos los métodos.
+- Diferencias: CatBoost amplifica el rol de SISTEMA_AÉREO y CLIMA, lo que sugiere que captura mejor interacciones no lineales.
+- Ruido: SEGURIDAD y LLEGADA_PROGRAMA son irrelevantes en todos los enfoques.
 
-Análisis del desempeño geográfico Se utiliza los datos de latitud (lat) y longitud (lon) para mapear las ventas de cada tienda y analizar la distribución geográfica de los productos vendidos.
+  El modelo usado para clasificar los retrasos graves corresponde a Pipeline de machine learning XGBoost y CatBoost:
 
-Generando gráfico Se generarón tres gráficos:
+  El pipeline completo incluye:
 
-Gráfico de torta que visualiza la distribución de los ingresos por ventas en cada tienda.
-Gráfico de línea de tiempo "Tendencia de las categoría de los ingresos por venta y año" y " Tendencia de las cantidades vendidas por categorías y año".
-Gráfico de heatmaps que visualiza los ingresos por ventas por zona geográfica limitada por año.
-CONCLUSIÓN 💿
+Entrenamiento de XGBoost y CatBoost con las variables más fuertes: RETRASO_AVIÓN_TARDÍO, RETRASO_AEROLÍNEA, RETRASO_SISTEMA_AÉREO, RETRASO_CLIMA.
 
-Análisis detallado basádose en los resultados obtenidos en las 4 tiendas en los ingresos por ventas, cantidades vendidas, costos incurridos en el envío de los productos a los clientes, calificación promedio de satisfacción que los clientes tienen acerca de cada tienda y producto vendido, como un mapeo acercá de la zona geográfica a la cual venden más y obtienen mayores ingresos. De tal foma de entregar una conclusión consistente a qué tienda se debe cerrar de acuerdo a los resultados obtenidos.
+Priorizar las dos variables clave (AVIÓN_TARDÍO y AEROLÍNEA).
+Explorar interacciones con SISTEMA_AÉREO y CLIMA, que CatBoost detecta mejor.
+Creación del ensemble (promedio de probabilidades). Esto suaviza las diferencias y equilibra recall y precisión.
 
-Archivos del Proyecto 📂
+Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 
-CSV: Archivos que contienen las bases de datos de cada tienda, utilizados para el análisis.
+Rsultados otenidos:
+- Matriz de confusión
+- Dataset limpio llamado: flight_clean.csv
+
+ 
+# 📂 Archivos del Proyecto 
+
+Parquet: Archivos que contienen las bases de datos de cada aerolínea.
 Jupyter Notebook: Proyecto desarrollado en Google Colaboratory, utilizando Python y bibliotecas como Pandas para realizar el análisis de datos.
-Lenguaje y Bibliotecas Utilizadas 💻
+
+# 💻Lenguaje y Bibliotecas Utilizadas 
 
 Lenguaje:
 
-Python
-Bibliotecas Principales:
+- Python
 
-Pandas: Manipulación y análisis de datos estructurados.
-NumPy: Trabajo con arrays multidimensionales y cálculos matemáticos.
-Matplotlib: Creación de gráficos y visualizaciones de datos.
-Seaborn: Biblioteca avanzada para visualizaciones estadísticas y estilizadas, ideal para explorar datos y destacar relaciones entre variables.
+📚 Bibliotecas Principales: 
+
+- Pandas: Manipulación y análisis de datos estructurados.
+- NumPy: Trabajo con arrays multidimensionales y cálculos matemáticos.
+- Matplotlib: Creación de gráficos y visualizaciones de datos.
+- Seaborn: Biblioteca avanzada para visualizaciones estadísticas y estilizadas, ideal para explorar datos y destacar relaciones entre variables.
+- XGBoost: Biblioteca de Extreme Gradient Boosting, optimizada para velocidad y rendimiento en clasificación y regresión.
+- CatBoost: Biblioteca de Categorical Boosting, especializada en manejar eficientemente variables categóricas y reducir el riesgo de overfitting.
+
+
 Instalación 💽
 
 Ejecuta el siguiente comando para instalar las bibliotecas necesarias:
