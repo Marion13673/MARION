@@ -216,6 +216,6 @@ Envía tu rama al repositorio remoto (git push origin feature/nueva-caracteristi
 
 Abre una Pull Request.
 
-# 📜 Licencia** 
+# 📜 Licencia
 
 📄 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más información.
