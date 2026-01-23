@@ -1,7 +1,7 @@
 # ✈️FlightOnTime
 # VARIABLES EXPLICATIVAS DE LAS CAUSAS
 
-## INTRODUCCIÓN 🚀
+# INTRODUCCIÓN 🚀
 
 El proyecto **FlightOnTime** consiste desarrollar una solución predictiva capaz de estimar si un vuelo va a despegar a tiempo o con retraso. 
 
@@ -45,7 +45,7 @@ Usar incluso modelos simples para detectar puntos críticos, aportando valor inm
 
 Manipular datos en **flights2015.parquet**, contribuye a mejorar:
 
-1. Formato:Binario, columnas
+1.- Formato:Binario, columnas
 
 2.- Compresión:Alta compresión, ocupa mucho menos
 
@@ -92,15 +92,20 @@ El conjunto de datos incluye la siguiente información:
 
 
 
-DESCRIPCIÓN 🖌️
+# DESCRIPCIÓN 🖌️
 
-Ventas por categoría Se ha calculado la cantidad de productos vendidos por categoría en cada tienda. La idea es agrupar los datos por categoría y contar el número de ventas de cada tipo, mostrando las categorías más populares de cada tienda.
+1.- El dataset contiene más de 5.8 millones de vuelos.
 
-Valoración media por tienda_ En este paso, se calcula las calificaciones promedio de los clientes para cada tienda. El objetivo es conocer la satisfacción del cliente con los productos vendidos.
+2.- ATL (Atlanta) es el aeropuerto más importante tanto en salidas como en llegadas.
 
-Productos más vendidos y menos vendidos En este paso, se identifica qué productos fueron los más vendidos y los menos vendidos en cada tienda. Visualizando los resultados para que quede claro qué productos destacaron en ventas en cada tienda.
+3.- La flota tiene casi 5,000 aviones distintos, pero algunos operan mucho más que otros.
 
-Valor del envío promedio por tienda calcular el costo de envío promedio para cada tienda. El objetivo es comprender cuánto se gasta, en promedio, en el envío de cada tienda.
+4.- Más del 98% de los vuelos no se cancelan, lo que indica que las cancelaciones son excepcionales.
+
+5.- Análisis para reconocer las variables que influyen en los retrasos graves, para ello se realiza un gráfico de barra que se muestra a continuación:
+
+
+ 
 
 Análisis del desempeño geográfico Se utiliza los datos de latitud (lat) y longitud (lon) para mapear las ventas de cada tienda y analizar la distribución geográfica de los productos vendidos.
 
