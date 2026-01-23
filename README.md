@@ -57,6 +57,19 @@ Manipular datos en **flights2015.parquet**, contribuye a mejorar:
 
 6.- Compatibilidad:  Requiere librerías (pandas, pyarrow, spark)
 
+Cuando usar:
+**Parquet**
+
+- Cuando trabajas con grandes volúmenes de datos.
+  
+- En pipelines de machine learning y big data.
+  
+- Cuando la eficiencia y el rendimiento son prioritarios.
+
+🌌 En resumen: CSV es universal y simple, pero Parquet es más eficiente y potente para manipulación de datos a gran escala.
+¿Quieres que te muestre un ejemplo práctico en Python de cómo leer y escribir un mismo dataset en CSV y Parquet para comparar tamaño y velocidad?
+
+
 # 📑 Estructura de datos: 
 
 El conjunto de datos incluye la siguiente información:
@@ -170,6 +183,30 @@ Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 # ✈️FlightOnTime
 # PREDICCIÓN DE RETRASOS DE VUELOS
 
+# ✨ Características 
+
+Manipular datos en **flight_clean.csv**:
+
+1.- Formato:  Texto plano, filas
+
+2.- Compresión:  Limitada, ocupa más espacio
+
+3.- Lectura/Escritura:  Lento en grandes volúmenes
+
+4.- Estructura:  No guarda tipos de datos, todo es texto
+
+5.- Escalabilidad:  Adecuado para datasets pequeños/medianos
+
+6.- Compatibilidad:  Universal, cualquier programa lo abre
+
+Cuando usar:
+
+** CSV:**
+- Cuando necesitas máxima compatibilidad (Excel, Notepad, cualquier lenguaje).
+- 
+- Para compartir datos pequeños con usuarios no técnicos.
+
+
 # 📑 Estructura de datos: 
 
 - Unnamed: 0 → índice automático generado al exportar el archivo (no es una variable relevante).
@@ -197,7 +234,7 @@ Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 
  **📈 Variables de resultado**
 - LLEGADA_PROGRAMA → hora de llegada programada (en formato decimal de horas).
-- RETRASO_GRAVE → indicador binario (0/1) de si el retraso fue considerado grave según el umbral definido (>60 min, por ejemplo).
+- RETRASO_GRAVE → indicador binario (0/1) de si el retraso fue considerado grave según el umbral definido (>30 min, por ejemplo).
 
 🌌 El dataset combina datos básicos del vuelo, estado operativo (cancelado, desviado) y causas de retraso, lo que permite analizar tanto la puntualidad como los factores que afectan la operación.
 
