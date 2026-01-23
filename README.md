@@ -109,6 +109,24 @@ El conjunto de datos incluye la siguiente información:
 
  
 
+
+
+
+
+
+
+
+**- RETRASO_AVIÓN_TARDÍO** no es una causa primaria, sino más bien un efecto acumulado. Se refiere a los minutos de retraso que un vuelo hereda porque el avión llegó tarde de un vuelo anterior. Ese retraso puede estar explicado por cualquiera de las otras causas:
+  -  RETRASO_CLIMA → si el vuelo anterior se demoró por tormenta.
+  -  RETRASO_AEROLÍNEA → si hubo problemas operativos o logísticos.
+  -  RETRASO_SISTEMA_AÉREO → congestión en el tráfico aéreo.
+  -  RETRASO_SEGURIDAD → inspecciones adicionales.
+
+
+
+
+
+
 Análisis del desempeño geográfico Se utiliza los datos de latitud (lat) y longitud (lon) para mapear las ventas de cada tienda y analizar la distribución geográfica de los productos vendidos.
 
 Generando gráfico Se generarón tres gráficos:
