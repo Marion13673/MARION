@@ -66,9 +66,6 @@ Cuando usar:
   
 - Cuando la eficiencia y el rendimiento son prioritarios.
 
-🌌 En resumen: CSV es universal y simple, pero Parquet es más eficiente y potente para manipulación de datos a gran escala.
-¿Quieres que te muestre un ejemplo práctico en Python de cómo leer y escribir un mismo dataset en CSV y Parquet para comparar tamaño y velocidad?
-
 
 # 📑 Estructura de datos: 
 
