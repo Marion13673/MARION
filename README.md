@@ -163,7 +163,7 @@ Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 **Rsultados otenidos:**
 
 - Matriz de confusión
-  ![Matriz_de_confusión](images/Matriz_de_cofusion_final.png)
+  ![Matriz_de_confusión](images/Matriz_de_confusion_final.png)
 
 - Dataset limpio llamado: flight_clean.csv
   
