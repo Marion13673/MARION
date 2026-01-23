@@ -198,7 +198,7 @@ Manipular datos en **flight_clean.csv**:
 
 Cuando usar:
 
-** CSV:**
+**CSV**
 - Cuando necesitas máxima compatibilidad (Excel, Notepad, cualquier lenguaje).
 - 
 - Para compartir datos pequeños con usuarios no técnicos.
