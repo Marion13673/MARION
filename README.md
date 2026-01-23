@@ -113,7 +113,7 @@ El conjunto de datos incluye la siguiente información:
   -  RETRASO_SISTEMA_AÉREO → congestión en el tráfico aéreo.
   -  RETRASO_SEGURIDAD → inspecciones adicionales.
 
-📊 Interpretación de retrasos por rango de minuto consideradas en el pryecto para evaluar los retrasos graves.
+**📊 Interpretación de retrasos por rango de minuto consideradas en el pryecto para evaluar los retrasos graves.**
 
 Esta clasificación no corresponde a un estándar oficial de la industria aérea. Se adopta como convención interna del proyecto, inspirada en prácticas comunes de aerolíneas y autoridades de transporte, para facilitar la interpretación y comunicación de los resultados.
 
@@ -126,7 +126,7 @@ Esta clasificación no corresponde a un estándar oficial de la industria aérea
 | Retraso grave |  >60| Impacto fuerte en pasajeros y aerolínea |
 |Retraso extremo|>180|Casos excepcionales, suelen implicar compensaciones|
 
-Factores correlacionados con retrasos superiores a 30 minutos:
+**Factores correlacionados con retrasos superiores a 30 minutos:**
 
 | Retrasos| Correlación|
 |----------------|---------------|
@@ -144,13 +144,13 @@ Factores correlacionados con retrasos superiores a 30 minutos:
 |||
 |RETRASO_SEGURIDAD|       0.029881|
 
-- Consistencia absoluta: RETRASO_AVIÓN_TARDÍO y RETRASO_AEROLÍNEA son los más fuertes en todos los métodos.
-- Diferencias: CatBoost amplifica el rol de SISTEMA_AÉREO y CLIMA, lo que sugiere que captura mejor interacciones no lineales.
+- Consistencia absoluta: **RETRASO_AVIÓN_TARDÍO y RETRASO_AEROLÍNEA** son los más fuertes en todos los métodos.
+- Diferencias: CatBoost amplifica el rol de **SISTEMA_AÉREO y CLIMA**, lo que sugiere que captura mejor interacciones no lineales.
 - Ruido: SEGURIDAD y LLEGADA_PROGRAMA son irrelevantes en todos los enfoques.
 
-  El modelo usado para clasificar los retrasos graves corresponde a Pipeline de machine learning XGBoost y CatBoost:
+El modelo usado para clasificar los retrasos graves corresponde a **"Pipeline de machine learning XGBoost y CatBoost°*:
 
-  El pipeline completo incluye:
+El pipeline completo incluye:
 
 Entrenamiento de XGBoost y CatBoost con las variables más fuertes: RETRASO_AVIÓN_TARDÍO, RETRASO_AEROLÍNEA, RETRASO_SISTEMA_AÉREO, RETRASO_CLIMA.
 
@@ -160,7 +160,8 @@ Creación del ensemble (promedio de probabilidades). Esto suaviza las diferencia
 
 Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 
-Rsultados otenidos:
+**Rsultados otenidos:**
+
 - Matriz de confusión
 - Dataset limpio llamado: flight_clean.csv
 
@@ -176,7 +177,7 @@ Lenguaje:
 
 - Python
 
-📚 Bibliotecas Principales: 
+**📚 Bibliotecas Principales:** 
 
 - Pandas: Manipulación y análisis de datos estructurados.
 - NumPy: Trabajo con arrays multidimensionales y cálculos matemáticos.
@@ -186,19 +187,19 @@ Lenguaje:
 - CatBoost: Biblioteca de Categorical Boosting, especializada en manejar eficientemente variables categóricas y reducir el riesgo de overfitting.
 
 
-Instalación 💽
+# 💽 Instalación 
 
 Ejecuta el siguiente comando para instalar las bibliotecas necesarias:
 
 pip install pandas numpy matplotlib
 
-**Instrucciones para Ejecutar** 🚀
+# 🚀 Instrucciones para Ejecutar
 
 Clona este repositorio en tu máquina local: ´´´bash
 git clone https://github.com/Marion13673/Analisis-ventas-por-tienda.git
 Abre el archivo index.html en tu navegador para ver y usar la aplicación.
 
-**Contribuciones** 🤝
+# 🤝 Contribuciones
 
 💡 ¡Las contribuciones son bienvenidas! Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 
@@ -208,6 +209,6 @@ Realiza tus cambios y haz un commit (git commit -m 'Añadir nueva característic
 Envía tu rama al repositorio remoto (git push origin feature/nueva-caracteristica).
 Abre una Pull Request.
 
-**Licencia** 📜
+# 📜 Licencia** 
 
 📄 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más información.
