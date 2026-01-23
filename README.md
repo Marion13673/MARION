@@ -1,7 +1,7 @@
 # ✈️FlightOnTime
 # VARIABLES EXPLICATIVAS DE LAS CAUSAS QUE INFLUYEN EN LOS RETRASOS GRAVES
 
-# INTRODUCCIÓN 🚀
+# 🚀 INTRODUCCIÓN 
 
 El proyecto **FlightOnTime** consiste desarrollar una solución predictiva capaz de estimar si un vuelo va a despegar a tiempo o con retraso. 
 
@@ -41,7 +41,7 @@ Usar incluso modelos simples para detectar puntos críticos, aportando valor inm
 
 
 
-# Características ✨
+# ✨ Características 
 
 Manipular datos en **flights2015.parquet**, contribuye a mejorar:
 
@@ -57,7 +57,7 @@ Manipular datos en **flights2015.parquet**, contribuye a mejorar:
 
 6.- Compatibilidad:Requiere librerías (pandas, pyarrow, spark)
 
-# Estructura de datos: 📑
+# 📑 Estructura de datos: 
 
 El conjunto de datos incluye la siguiente información:
 
@@ -92,7 +92,7 @@ El conjunto de datos incluye la siguiente información:
 
 
 
-# DESCRIPCIÓN 🖌️
+# 🖌️ DESCRIPCIÓN 
 
 1.- El dataset contiene más de 5.8 millones de vuelos.
 
@@ -107,30 +107,6 @@ El conjunto de datos incluye la siguiente información:
 ![Causa más común retraso](images/Causa_mas_comun_de_retraso.png)
 
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
 **- RETRASO_AVIÓN_TARDÍO** no es una causa primaria, sino más bien un efecto acumulado. Se refiere a los minutos de retraso que un vuelo hereda porque el avión llegó tarde de un vuelo anterior. Ese retraso puede estar explicado por cualquiera de las otras causas:
   -  RETRASO_CLIMA → si el vuelo anterior se demoró por tormenta.
   -  RETRASO_AEROLÍNEA → si hubo problemas operativos o logísticos.
