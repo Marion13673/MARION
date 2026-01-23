@@ -127,12 +127,19 @@ Esta clasificación no corresponde a un estándar oficial de la industria aérea
 |Retraso extremo|>180|Casos excepcionales, suelen implicar compensaciones|
 
 Factores correlacionados con retrasos superiores a 30 minutos:
+
 RETRASO_GRAVE            1.000000
+
 RETRASO_AVIÓN_TARDÍO     0.535315
+
 RETRASO_AEROLÍNEA        0.389211
+
 RETRASO_SISTEMA_AÉREO    0.248072
+
 RETRASO_CLIMA            0.156599
+
 LLEGADA_PROGRAMA         0.109532
+
 RETRASO_SEGURIDAD        0.029881
 
 - Consistencia absoluta: RETRASO_AVIÓN_TARDÍO y RETRASO_AEROLÍNEA son los más fuertes en todos los métodos.
