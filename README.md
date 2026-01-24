@@ -241,7 +241,7 @@ Cuando usar:
 
 - El dataset marca como RETRASO_GRAVE = 1 todos los vuelos con más de 30 minutos de retraso, y esa es la etiqueta que el modelo está aprendiendo a predecir.
 
-🧠 Análisis del modelo elegido: CatBoostClassifier
+🧠 Análisis del modelo elegido: **CatBoostClassifier**
 1. Naturaleza del problema
 - El objetivo es predecir si un vuelo tendrá un retraso grave (≥30 min), lo que constituye un problema de clasificación binaria.
 - La variable objetivo (RETRASO_GRAVE) se construye a partir de múltiples causas, lo que implica complejidad multivariable.
