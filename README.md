@@ -43,7 +43,7 @@ Notebook variables explicativas: causas de retrasos graves flights2015.ipynb
 
 # ✨ Características 
 
-Manipular datos en **flights2015.parquet**, contribuye a mejorar:
+Base de datos en **flights2015.parquet**, contribuye a mejorar:
 
 1.- Formato:  Binario, columnas
 
@@ -182,7 +182,7 @@ Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 
 # ✨ Características 
 
-Manipular datos en **flight_clean.csv**:
+Base de datos en **flight_clean.csv**:
 
 1.- Formato:  Texto plano, filas
 
