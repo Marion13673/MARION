@@ -323,11 +323,11 @@ Se eligió CatBoostClassifier porque ofrece un equilibrio técnico entre precisi
 👉 Indican variabilidad alta y presencia frecuente de vuelos con retrasos graves.
 3. Outliers frecuentes
 - Algunas aerolíneas como UA, AA, DL muestran puntos muy altos (>1000 min).
-- 
+  
 👉 Estos podrían ser vuelos con desvíos, cancelaciones tardías o problemas operativos severos.
 4. Comparación de medianas
 - La mediana más baja parece estar en HA, mientras que aerolíneas como EV y MQ tienen medianas más elevadas.
-- 
+  
 👉 Esto refleja diferencias estructurales en la operación: rutas más cortas, mejor gestión, o menor congestión.
 
 ---
