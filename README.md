@@ -332,10 +332,6 @@ Cuando usar:
 - Puede haber pequeñas diferencias entre días hábiles y fines de semana, pero no son significativas en este gráfico.
 - Esto podría reflejar una buena planificación semanal por parte de las aerolíneas.
 
-
-📈 Sugerencia complementaria
-¿Te gustaría que prepare ahora el gráfico comparativo entre fin de semana vs días hábiles (ES_FIN_DE_SEMANA) para ver si hay alguna diferencia más marcada cuando agrupamos por tipo de día? También puedo ayudarte a narrar estos hallazgos como parte de tu demo o presentación ritualizada.
-
  
 # 📂 Archivos del Proyecto 
 
