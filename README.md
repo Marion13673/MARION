@@ -240,6 +240,29 @@ Cuando usar:
 # 🖌️ DESCRIPCIÓN 
 
 - El dataset marca como RETRASO_GRAVE = 1 todos los vuelos con más de 30 minutos de retraso, y esa es la etiqueta que el modelo está aprendiendo a predecir.
+
+🧠 Análisis del modelo elegido: CatBoostClassifier
+1. Naturaleza del problema
+- El objetivo es predecir si un vuelo tendrá un retraso grave (≥30 min), lo que constituye un problema de clasificación binaria.
+- La variable objetivo (RETRASO_GRAVE) se construye a partir de múltiples causas, lo que implica complejidad multivariable.
+2. Características del dataset
+- Contiene una mezcla de variables categóricas y numéricas:
+- Categóricas: aerolínea, aeropuerto, franja horaria, temporada, día de la semana.
+- Numéricas: distancia, hora de llegada, mes, etc.
+- Muchas variables categóricas tienen alta cardinalidad (ej. aeropuertos, vuelos), lo que puede dificultar el uso de modelos tradicionales como regresión logística o SVM.
+3. Ventajas de CatBoost
+CatBoost fue elegido por varias razones técnicas y simbólicas:
+
+| Ventaja técnica |  |
+|--|--| 
+|✅ Maneja variables categóricas sin necesidad de one-hot encoding|Evita explosión dimensional y simplifica el pipeline|
+|✅ Robusto ante datos faltantes|El modelo puede imputar internamente sin perder precisión|
+|✅ Evita overfitting con regularización por orden|Ideal para datos con patrones temporales o secuenciales|
+|✅ Compatible con early stopping|Permite detener el entrenamiento si no mejora en el set de validación|
+|✅ Soporta class_weights|Muy útil para problemas desbalanceados como este (más vuelos sin retraso que con retraso grave)|
+|✅ Alta precisión y velocidad|Se adapta bien a entornos operativos con muchos vuelos|
+
+---
 - El RETRASO_GRAVE ='RETRASO_SISTEMA_AEREO','RETRASO_SEGURIDAD',RETRASO_AEROLINEA','RETRASO_AVION_TARDIO','RETRASO_CLIMA'= RETRASO_TOTAL
 
 - Gráficos que ayudan a describir las variables significativas en el aprendizaje del modelo:
