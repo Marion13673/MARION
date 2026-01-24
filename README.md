@@ -295,6 +295,27 @@ Cuando usar:
 - Hay mayor capacidad de respuesta ante imprevistos.
 - Los vuelos de la mañana y tarde suelen ser más monitoreados y ajustados.
 
+  ---
+📊 Estructura del gráfico
+- Eje X: estaciones del año (Verano, Otoño, Invierno, Primavera).
+- Eje Y: proporción de vuelos con retraso grave (mayor o igual a 30 minutos), expresada como valor entre 0 y 1.
+- Cada barra representa el porcentaje de vuelos en esa estación que sufrieron retrasos significativos
+
+![Proporción_retrasos_graves_por_temporada_horaria](images/Proporcion_de_retrasos_graves_por_temporada.png)
+  
+🔍 Análisis comparativo
+1. Verano y Otoño (≈ 0.11–0.12)
+- Estas estaciones muestran las proporciones más altas de retrasos graves.
+- Posibles causas:
+- Verano: alta demanda turística, congestión en aeropuertos, mayor número de vuelos.
+- Otoño: transición operativa, ajustes de itinerarios, feriados intermedios.
+2. Invierno y Primavera (< 0.10)
+- Proporciones más bajas, aunque no despreciables.
+- Invierno: podría esperarse más retrasos por clima, pero quizás hay menos vuelos o mejor planificación.
+- Primavera: periodo de recuperación operativa, menos saturación, clima más estable.
+---
+
+
 
  
 # 📂 Archivos del Proyecto 
