@@ -268,6 +268,7 @@ Cuando usar:
 - Recall: mide cuántos retrasos graves fueron detectados.
 - F1 Score: balance entre precisión y recall.
 - ROC-AUC: mide la capacidad del modelo para distinguir entre clases.
+- 
 👉 Esto indica un enfoque cuidadoso y afinado, donde no solo se entrena el modelo, sino que se ritualiza el umbral de decisión para maximizar utilidad operativa.
 
 🔎 Conclusión técnica
