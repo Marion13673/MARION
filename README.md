@@ -343,12 +343,14 @@ Cada boxplot representa:
 
 1. Madrugada (≈ 0.48)
 - Es la franja con mayor proporción de retrasos graves: casi el 48% de los vuelos que llegan en esta franja sufren retrasos significativos.
+  
 Esto puede deberse a:
 - Efecto acumulativo de retrasos del día anterior.
 - Menor disponibilidad operativa (menos personal, menos vuelos de respaldo).
 - Condiciones climáticas nocturnas más impredecibles.
 2. Mañana, Tarde y Noche (< 0.1)
 - Estas franjas muestran proporciones mucho menores, todas por debajo del 10%.
+  
 Esto sugiere que:
 - Las operaciones están más estabilizadas durante el día.
 - Hay mayor capacidad de respuesta ante imprevistos.
@@ -367,9 +369,11 @@ Esto sugiere que:
 🔍 Análisis comparativo
 1. Verano y Otoño (≈ 0.11–0.12)
 - Estas estaciones muestran las proporciones más altas de retrasos graves.
+  
 Posibles causas:
 - Verano: alta demanda turística, congestión en aeropuertos, mayor número de vuelos.
 - Otoño: transición operativa, ajustes de itinerarios, feriados intermedios.
+  
 2. Invierno y Primavera (< 0.10)
 - Proporciones más bajas, aunque no despreciables.
 - Invierno: podría esperarse más retrasos por clima, pero quizás hay menos vuelos o mejor planificación.
