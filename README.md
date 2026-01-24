@@ -269,8 +269,6 @@ Cuando usar:
 - F1 Score: balance entre precisión y recall.
 - ROC-AUC: mide la capacidad del modelo para distinguir entre clases.
   
-👉 Esto indica un enfoque cuidadoso y afinado, donde no solo se entrena el modelo, sino que se ritualiza el umbral de decisión para maximizar utilidad operativa.
-
 🔎 Conclusión técnica
 El modelo CatBoostClassifier fue seleccionado porque responde de manera óptima a las características del problema y del dataset:
 1. Manejo eficiente de variables categóricas
