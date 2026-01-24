@@ -240,7 +240,7 @@ Cuando usar:
 # 🖌️ DESCRIPCIÓN 
 
 - El dataset marca como RETRASO_GRAVE = 1 todos los vuelos con más de 30 minutos de retraso, y esa es la etiqueta que el modelo está aprendiendo a predecir.
-- El RETRASO_GRAVE='RETRASO_SISTEMA_AEREO','RETRASO_SEGURIDAD',RETRASO_AEROLINEA','RETRASO_AVION_TARDIO','RETRASO_CLIMA'= RETRASO_TOTAL
+- El RETRASO_GRAVE ='RETRASO_SISTEMA_AEREO','RETRASO_SEGURIDAD',RETRASO_AEROLINEA','RETRASO_AVION_TARDIO','RETRASO_CLIMA'= RETRASO_TOTAL
 
 - Gráficos que ayudan a describir las variables significativas en el aprendizaje del modelo:
   
