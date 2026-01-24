@@ -265,12 +265,16 @@ Cuando usar:
 **📈 Evaluación del modelo**
 
 - Se usó un umbral personalizado (0.7912) para ajustar la sensibilidad del modelo.
-- Se reportaron métricas clave:
-- Precisión: mide cuántas predicciones positivas fueron correctas.
-- Recall: mide cuántos retrasos graves fueron detectados.
-- F1 Score: balance entre precisión y recall.
-- ROC-AUC: mide la capacidad del modelo para distinguir entre clases.
+- 
+Se reportaron métricas clave:
+
+- Precisión: 0.76 → mide cuántas predicciones positivas fueron correctas.
+- Recall: 0.77 → mide cuántos retrasos graves fueron detectados.
+- F1 Score: 0.76 → balance entre precisión y recall.
+- ROC-AUC: 0.97 → mide la capacidad del modelo para distinguir entre clases.
   
+   ![Curva_ROC](images/Curva_ROC.png)
+
 **🔎 Conclusión técnica**
 
 El modelo CatBoostClassifier fue seleccionado porque responde de manera óptima a las características del problema y del dataset:
@@ -288,7 +292,13 @@ El modelo CatBoostClassifier fue seleccionado porque responde de manera óptima 
 - Esto es importante en datos de vuelos, donde existen patrones estacionales y semanales.
 - Rendimiento en métricas clave
 5. El modelo mostró buen desempeño en métricas como ROC-AUC, F1 y recall, lo que indica capacidad para distinguir correctamente entre vuelos con y sin retraso grave.
+
+ 
+  
 - El ajuste de un umbral óptimo (0.7912) permitió balancear precisión y recall según las necesidades operativas.
+
+  ![Matriz_de_confusión](images/confusion_matrix.png)
+  
   
 **RESUMEN DE LA CONCLUSIÓN**
   
