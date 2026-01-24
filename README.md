@@ -251,7 +251,6 @@ Cuando usar:
 - Numéricas: distancia, hora de llegada, mes, etc.
 - Muchas variables categóricas tienen alta cardinalidad (ej. aeropuertos, vuelos), lo que puede dificultar el uso de modelos tradicionales como regresión logística o SVM ((Support Vector Machine)).
 3. Ventajas de CatBoost
-CatBoost fue elegido por varias razones técnicas y simbólicas:
 
 | **Ventaja técnica** | **¿Por qué es relevante aquí?** |
 |--|--| 
