@@ -263,7 +263,7 @@ Cuando usar:
 
 ---
 
-![Proporción_retrasos_graves_por_franja_horaria](images/Proporcion_retrasos_graves_por_franja_horaria.png)
+![Proporción_retrasos_graves_por_franja_horaria](images/Proporcion_de_retrasos_graves_por_franja_horaria.png]
 
  
 # 📂 Archivos del Proyecto 
