@@ -231,7 +231,7 @@ Cuando usar:
 
  **📈 Variables de resultado**
 - LLEGADA_PROGRAMA → hora de llegada programada (en formato decimal de horas).
-- RETRASO_GRAVE → indicador binario (0/1) de si el retraso fue considerado grave según el umbral definido (>30 min, por ejemplo).
+- RETRASO_GRAVE → indicador binario (0/1) de si el retraso fue considerado grave según el umbral definido (>30 min).
 
 🌌 El dataset combina datos básicos del vuelo, estado operativo (cancelado, desviado) y causas de retraso, lo que permite analizar tanto la puntualidad como los factores que afectan la operación.
 
