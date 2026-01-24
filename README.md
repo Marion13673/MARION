@@ -299,7 +299,7 @@ Se eligió CatBoostClassifier porque ofrece un equilibrio técnico entre precisi
 
 **- GRÁFICOS QUE AYUDAN A DESCRIBIR LAS VARIABLES SIGNIFICATIVAS EN EL APRENDIZAJE DEL MODELO**
   
-🔍 Análisis comparativo entre aerolíneas:
+**🔍 Análisis comparativo entre aerolíneas:**
 
 📊 Estructura del gráfico
 - Eje X: códigos de aerolíneas (ej. AS, AA, DL, UA, etc.).
@@ -331,7 +331,7 @@ Se eligió CatBoostClassifier porque ofrece un equilibrio técnico entre precisi
 👉 Esto refleja diferencias estructurales en la operación: rutas más cortas, mejor gestión, o menor congestión.
 
 ---
-🔍 Análisis interpretativo de la franja horaria
+**🔍 Análisis interpretativo de la franja horaria**
 
 📊 Estructura del gráfico
 - Eje X: Franja horaria de llegada (Madrugada, Mañana, Tarde, Noche).
@@ -355,6 +355,8 @@ Se eligió CatBoostClassifier porque ofrece un equilibrio técnico entre precisi
 - Los vuelos de la mañana y tarde suelen ser más monitoreados y ajustados.
 
   ---
+  **🔍 Análisis interpretativo de la temporada**
+  
 📊 Estructura del gráfico
 - Eje X: estaciones del año (Verano, Otoño, Invierno, Primavera).
 - Eje Y: proporción de vuelos con retraso grave (mayor o igual a 30 minutos), expresada como valor entre 0 y 1.
@@ -373,6 +375,8 @@ Se eligió CatBoostClassifier porque ofrece un equilibrio técnico entre precisi
 - Invierno: podría esperarse más retrasos por clima, pero quizás hay menos vuelos o mejor planificación.
 - Primavera: periodo de recuperación operativa, menos saturación, clima más estable.
 ---
+**🔍 Análisis interpretativo de de los días de la semana**
+
 📊 Estructura del gráfico
 - Eje X: días de la semana (Lunes a Domingo).
 - Eje Y: proporción de vuelos con retraso grave (mayor a 30 minutos), expresada como valor entre 0 y 1.
