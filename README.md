@@ -261,7 +261,9 @@ Cuando usar:
 - La mediana más baja parece estar en HA, mientras que aerolíneas como EV y MQ tienen medianas más elevadas.
 👉 Esto refleja diferencias estructurales en la operación: rutas más cortas, mejor gestión, o menor congestión.
 
+---
 
+![Proporción_retrasos_graves_por_franja_horaria](images/Proporcion_retrasos_graves_por_franja_horaria.png)
 
  
 # 📂 Archivos del Proyecto 
