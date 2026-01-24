@@ -294,7 +294,7 @@ Se eligió CatBoostClassifier porque ofrece un equilibrio técnico entre precisi
 ---
 - El RETRASO_GRAVE ='RETRASO_SISTEMA_AEREO','RETRASO_SEGURIDAD',RETRASO_AEROLINEA','RETRASO_AVION_TARDIO','RETRASO_CLIMA'= RETRASO_TOTAL
 
-- Gráficos que ayudan a describir las variables significativas en el aprendizaje del modelo:
+**- GRÁFICOS QUE AYUDAN A DESCRIBIR LAS VARIABLES SIGNIFICATIVAS EN EL APRENDIZAJE DEL MODELO**
   
 🔍 Análisis comparativo entre aerolíneas:
 
