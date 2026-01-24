@@ -289,9 +289,9 @@ El modelo CatBoostClassifier fue seleccionado porque responde de manera óptima 
 - Rendimiento en métricas clave
 5. El modelo mostró buen desempeño en métricas como ROC-AUC, F1 y recall, lo que indica capacidad para distinguir correctamente entre vuelos con y sin retraso grave.
 - El ajuste de un umbral óptimo (0.7912) permitió balancear precisión y recall según las necesidades operativas.
-- 
+  
 **RESUMEN DE LA CONCLUSIÓN**
-
+  
 Se eligió CatBoostClassifier porque ofrece un equilibrio técnico entre precisión, interpretabilidad y eficiencia computacional, adaptándose a un dataset con alta heterogeneidad de variables, presencia de datos faltantes y desbalance de clases. Su capacidad de manejar categóricas directamente y optimizar métricas críticas lo convierte en una herramienta adecuada para la predicción de retrasos graves en vuelos.
 
 ---
