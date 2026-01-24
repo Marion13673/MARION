@@ -237,6 +237,10 @@ Cuando usar:
 
 
 
+# 🖌️ DESCRIPCIÓN 
+
+- El dataset marca como RETRASO_GRAVE = 1 todos los vuelos con más de 30 minutos de retraso, y esa es la etiqueta que el modelo está aprendiendo a predecir.
+- 
 
 
  
