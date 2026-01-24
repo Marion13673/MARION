@@ -269,7 +269,7 @@ Cuando usar:
 
 
 ||Feature Id|	Importances|
-||-------|----------------|
+|--|-------|----------------|
 |0|	HORA_LLEGADA	|51.613366|
 1	|LLEGADA_PROGRAMA|	40.374843|
 2	|FRANJA_HORARIA_LLEGADA|	4.238255|
