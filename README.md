@@ -253,7 +253,7 @@ Cuando usar:
 3. Ventajas de CatBoost
 CatBoost fue elegido por varias razones técnicas y simbólicas:
 
-| Ventaja técnica |  |
+| **Ventaja técnica** | **¿Por qué es relevante aquí?** |
 |--|--| 
 |✅ Maneja variables categóricas sin necesidad de one-hot encoding|Evita explosión dimensional y simplifica el pipeline|
 |✅ Robusto ante datos faltantes|El modelo puede imputar internamente sin perder precisión|
@@ -261,6 +261,35 @@ CatBoost fue elegido por varias razones técnicas y simbólicas:
 |✅ Compatible con early stopping|Permite detener el entrenamiento si no mejora en el set de validación|
 |✅ Soporta class_weights|Muy útil para problemas desbalanceados como este (más vuelos sin retraso que con retraso grave)|
 |✅ Alta precisión y velocidad|Se adapta bien a entornos operativos con muchos vuelos|
+
+📈 Evaluación del modelo
+- Se usó un umbral personalizado (0.7912) para ajustar la sensibilidad del modelo.
+- Se reportaron métricas clave:
+- Precisión: mide cuántas predicciones positivas fueron correctas.
+- Recall: mide cuántos retrasos graves fueron detectados.
+- F1 Score: balance entre precisión y recall.
+- ROC-AUC: mide la capacidad del modelo para distinguir entre clases.
+👉 Esto indica un enfoque cuidadoso y afinado, donde no solo se entrena el modelo, sino que se ritualiza el umbral de decisión para maximizar utilidad operativa.
+
+🔎 Conclusión técnica
+El modelo CatBoostClassifier fue seleccionado porque responde de manera óptima a las características del problema y del dataset:
+1. Manejo eficiente de variables categóricas
+- El dataset incluye múltiples variables categóricas de alta cardinalidad (aerolínea, aeropuerto de origen/destino, franjas horarias, temporada).
+- CatBoost permite tratarlas directamente sin necesidad de aplicar one-hot encoding, evitando explosión dimensional y pérdida de información.
+2. Robustez frente a datos faltantes y ruido
+- El modelo maneja valores nulos y realiza imputaciones internas, lo que reduce la necesidad de preprocesamiento adicional.
+- Esto es crítico en datos operativos de vuelos, donde los registros pueden estar incompletos.
+3. Capacidad para trabajar con clases desbalanceadas
+- La proporción de vuelos con retraso grave es menor que la de vuelos sin retraso.
+- CatBoost permite ajustar class_weights, mejorando el recall de la clase minoritaria sin sacrificar precisión.
+4. Regularización y prevención de overfitting
+- El algoritmo utiliza ordered boosting, que reduce el riesgo de sobreajuste en datasets con dependencias temporales.
+- Esto es importante en datos de vuelos, donde existen patrones estacionales y semanales.
+- Rendimiento en métricas clave
+5. El modelo mostró buen desempeño en métricas como ROC-AUC, F1 y recall, lo que indica capacidad para distinguir correctamente entre vuelos con y sin retraso grave.
+- El ajuste de un umbral óptimo (0.7912) permitió balancear precisión y recall según las necesidades operativas.
+
+Se eligió CatBoostClassifier porque ofrece un equilibrio técnico entre precisión, interpretabilidad y eficiencia computacional, adaptándose a un dataset con alta heterogeneidad de variables, presencia de datos faltantes y desbalance de clases. Su capacidad de manejar categóricas directamente y optimizar métricas críticas lo convierte en una herramienta adecuada para la predicción de retrasos graves en vuelos.
 
 ---
 - El RETRASO_GRAVE ='RETRASO_SISTEMA_AEREO','RETRASO_SEGURIDAD',RETRASO_AEROLINEA','RETRASO_AVION_TARDIO','RETRASO_CLIMA'= RETRASO_TOTAL
