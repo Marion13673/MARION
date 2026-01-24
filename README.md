@@ -262,6 +262,7 @@ Cuando usar:
 |✅ Alta precisión y velocidad|Se adapta bien a entornos operativos con muchos vuelos|
 
 📈 Evaluación del modelo
+
 - Se usó un umbral personalizado (0.7912) para ajustar la sensibilidad del modelo.
 - Se reportaron métricas clave:
 - Precisión: mide cuántas predicciones positivas fueron correctas.
@@ -270,6 +271,7 @@ Cuando usar:
 - ROC-AUC: mide la capacidad del modelo para distinguir entre clases.
   
 🔎 Conclusión técnica
+
 El modelo CatBoostClassifier fue seleccionado porque responde de manera óptima a las características del problema y del dataset:
 1. Manejo eficiente de variables categóricas
 - El dataset incluye múltiples variables categóricas de alta cardinalidad (aerolínea, aeropuerto de origen/destino, franjas horarias, temporada).
@@ -310,15 +312,19 @@ Se eligió CatBoostClassifier porque ofrece un equilibrio técnico entre precisi
 
 1. Aerolíneas con menor dispersión
 - AS (Alaska Airlines) y HA (Hawaiian Airlines) muestran cajas compactas y bajas medianas.
+  
 👉 Esto sugiere alta puntualidad y pocos retrasos extremos.
 2. Aerolíneas con mayor dispersión
 - EV, OO, MQ y F9 tienen cajas más altas y muchos puntos fuera del rango.
+  
 👉 Indican variabilidad alta y presencia frecuente de vuelos con retrasos graves.
 3. Outliers frecuentes
 - Algunas aerolíneas como UA, AA, DL muestran puntos muy altos (>1000 min).
+- 
 👉 Estos podrían ser vuelos con desvíos, cancelaciones tardías o problemas operativos severos.
 4. Comparación de medianas
 - La mediana más baja parece estar en HA, mientras que aerolíneas como EV y MQ tienen medianas más elevadas.
+- 
 👉 Esto refleja diferencias estructurales en la operación: rutas más cortas, mejor gestión, o menor congestión.
 
 ---
