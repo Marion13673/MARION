@@ -173,7 +173,19 @@ Evaluación final con el umbral 0.6 (matriz de confusión + reporte).
 
   ![Matriz_de_confusión](images/Matriz_de_confusion_final.png)
 
-- Dataset limpio llamado: flight_clean.csv
+Métricas clave:
+
+Precisión: 0.91 → mide cuántas predicciones positivas fueron correctas.
+
+Recall: 0.90 → mide cuántos retrasos graves fueron detectados.
+
+F1 Score: 0.91 → balance entre precisión y recall.
+
+ROC-AUC: 0.97 → mide la capacidad del modelo para distinguir entre clases.
+
+
+
+- Dataset limpio llamado: **flight_clean.csv**
 
  --- 
  Notebook_flight_on_time.ipynb 
