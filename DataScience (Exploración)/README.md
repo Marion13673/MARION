@@ -242,6 +242,7 @@ Cuando usar:
 - RETRASO_CLIMA → minutos de retraso por condiciones meteorológicas.
 
  **📈 Variables de resultado**
+- HORA_LLEGADA → el dato observado, lo que efectivamente ocurrió.
 - LLEGADA_PROGRAMA → hora de llegada programada (en formato decimal de horas).
 - RETRASO_GRAVE → indicador binario (0/1) de si el retraso fue considerado grave según el umbral definido (>30 min).
 
@@ -268,7 +269,7 @@ Cuando usar:
 
 
 ||Feature Id|	Importances|
-|-------|----------------|
+||-------|----------------|
 |0|	HORA_LLEGADA	|51.613366|
 1	|LLEGADA_PROGRAMA|	40.374843|
 2	|FRANJA_HORARIA_LLEGADA|	4.238255|
