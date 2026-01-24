@@ -240,10 +240,14 @@ Cuando usar:
 # 🖌️ DESCRIPCIÓN 
 
 - El dataset marca como RETRASO_GRAVE = 1 todos los vuelos con más de 30 minutos de retraso, y esa es la etiqueta que el modelo está aprendiendo a predecir.
-- 
+
+- Gráficos que ayudan a describir las variables significativas en el aprendizaje del modelo:
+  
 🔍 Análisis comparativo entre aerolíneas:
 
-- 1. Aerolíneas con menor dispersión
+![Distribución_retrasos_erolínea](images/Distribucion_de_retrasos_por_aerolinea.png)
+
+1. Aerolíneas con menor dispersión
 - AS (Alaska Airlines) y HA (Hawaiian Airlines) muestran cajas compactas y bajas medianas.
 👉 Esto sugiere alta puntualidad y pocos retrasos extremos.
 2. Aerolíneas con mayor dispersión
@@ -257,7 +261,7 @@ Cuando usar:
 👉 Esto refleja diferencias estructurales en la operación: rutas más cortas, mejor gestión, o menor congestión.
 
 
-![Distribución_retrasos_erolínea](images/Distribucion_de_retrasos_por_aerolinea.png)
+
  
 # 📂 Archivos del Proyecto 
 
