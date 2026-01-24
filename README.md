@@ -304,7 +304,7 @@ Se eligió CatBoostClassifier porque ofrece un equilibrio técnico entre precisi
 📊 Estructura del gráfico
 - Eje X: códigos de aerolíneas (ej. AS, AA, DL, UA, etc.).
 - Eje Y: minutos de retraso total (hasta 2000 minutos).
-- Cada boxplot representa:
+Cada boxplot representa:
 - Mediana (línea central): el retraso típico.
 - Caja: rango intercuartílico (IQR), donde se concentra el 50% de los datos.
 - Bigotes: rango extendido sin outliers.
