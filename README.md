@@ -246,6 +246,16 @@ Cuando usar:
   
 🔍 Análisis comparativo entre aerolíneas:
 
+📊 Estructura del gráfico
+- Eje X: códigos de aerolíneas (ej. AS, AA, DL, UA, etc.).
+- Eje Y: minutos de retraso total (hasta 2000 minutos).
+- Cada boxplot representa:
+- Mediana (línea central): el retraso típico.
+- Caja: rango intercuartílico (IQR), donde se concentra el 50% de los datos.
+- Bigotes: rango extendido sin outliers.
+- Puntos individuales: vuelos con retrasos extremos (outliers).
+
+
 ![Distribución_retrasos_erolínea](images/Distribucion_de_retrasos_por_aerolinea.png)
 
 1. Aerolíneas con menor dispersión
@@ -262,8 +272,29 @@ Cuando usar:
 👉 Esto refleja diferencias estructurales en la operación: rutas más cortas, mejor gestión, o menor congestión.
 
 ---
+🔍 Análisis interpretativo de la franja horaria
+
+📊 Estructura del gráfico
+- Eje X: Franja horaria de llegada (Madrugada, Mañana, Tarde, Noche).
+- Eje Y: Proporción de vuelos con retraso grave (mayor a 30 minutos), expresada como valor entre 0 y 1.
+- Cada barra representa el porcentaje de vuelos en esa franja que sufrieron retrasos graves.
+
 
 ![Proporción_retrasos_graves_por_franja_horaria](images/Proporcion_de_retrasos_graves_por_franja_horaria.png)
+
+1. Madrugada (≈ 0.48)
+- Es la franja con mayor proporción de retrasos graves: casi el 48% de los vuelos que llegan en esta franja sufren retrasos significativos.
+- Esto puede deberse a:
+- Efecto acumulativo de retrasos del día anterior.
+- Menor disponibilidad operativa (menos personal, menos vuelos de respaldo).
+- Condiciones climáticas nocturnas más impredecibles.
+2. Mañana, Tarde y Noche (< 0.1)
+- Estas franjas muestran proporciones mucho menores, todas por debajo del 10%.
+- Esto sugiere que:
+- Las operaciones están más estabilizadas durante el día.
+- Hay mayor capacidad de respuesta ante imprevistos.
+- Los vuelos de la mañana y tarde suelen ser más monitoreados y ajustados.
+
 
  
 # 📂 Archivos del Proyecto 
