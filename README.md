@@ -249,7 +249,7 @@ Cuando usar:
 - Contiene una mezcla de variables categóricas y numéricas:
 - Categóricas: aerolínea, aeropuerto, franja horaria, temporada, día de la semana.
 - Numéricas: distancia, hora de llegada, mes, etc.
-- Muchas variables categóricas tienen alta cardinalidad (ej. aeropuertos, vuelos), lo que puede dificultar el uso de modelos tradicionales como regresión logística o SVM.
+- Muchas variables categóricas tienen alta cardinalidad (ej. aeropuertos, vuelos), lo que puede dificultar el uso de modelos tradicionales como regresión logística o SVM ((Support Vector Machine)).
 3. Ventajas de CatBoost
 CatBoost fue elegido por varias razones técnicas y simbólicas:
 
