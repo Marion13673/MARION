@@ -242,7 +242,7 @@ Cuando usar:
 - El dataset marca como RETRASO_GRAVE = 1 todos los vuelos con más de 30 minutos de retraso, y esa es la etiqueta que el modelo está aprendiendo a predecir.
 - 
 
-
+![Distribución_retrasos_erolínea](images/Distribucion_de_retrasos_por_aerolinea.png)
  
 # 📂 Archivos del Proyecto 
 
