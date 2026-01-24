@@ -314,8 +314,27 @@ Cuando usar:
 - Invierno: podría esperarse más retrasos por clima, pero quizás hay menos vuelos o mejor planificación.
 - Primavera: periodo de recuperación operativa, menos saturación, clima más estable.
 ---
+📊 Estructura del gráfico
+- Eje X: días de la semana (Lunes a Domingo).
+- Eje Y: proporción de vuelos con retraso grave (mayor a 30 minutos), expresada como valor entre 0 y 1.
+- Cada barra representa el porcentaje de vuelos en ese día que sufrieron retrasos graves.
+
+![Proporción_retrasos_graves_por_día](images/Proporcion_de_retrasos_graves_por_dia.png)
+
+🔍 Análisis interpretativo
+1. Distribución uniforme
+- Las barras son relativamente similares en altura, lo que indica que no hay un día claramente más vulnerable que otro.
+- Esto sugiere que los retrasos graves están distribuidos de forma homogénea durante la semana.
+2. Ausencia de picos extremos
+- No se observan días con proporciones cercanas a 0.2 o superiores.
+- Esto indica que el sistema aéreo mantiene una estabilidad operativa sin sobresaltos marcados por día.
+3. Ligeras variaciones
+- Puede haber pequeñas diferencias entre días hábiles y fines de semana, pero no son significativas en este gráfico.
+- Esto podría reflejar una buena planificación semanal por parte de las aerolíneas.
 
 
+📈 Sugerencia complementaria
+¿Te gustaría que prepare ahora el gráfico comparativo entre fin de semana vs días hábiles (ES_FIN_DE_SEMANA) para ver si hay alguna diferencia más marcada cuando agrupamos por tipo de día? También puedo ayudarte a narrar estos hallazgos como parte de tu demo o presentación ritualizada.
 
  
 # 📂 Archivos del Proyecto 
